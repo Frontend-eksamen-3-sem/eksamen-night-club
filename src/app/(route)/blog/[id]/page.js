@@ -1,13 +1,15 @@
 import Header from "../../components/Header";
 import Title from "../../components/Title";
+import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 
-export default function BlogPost() {
+export default function Blog() {
   return (
     <div className="">
       <main className="">
         <Header />
-        <Title>BLOG POST</Title>
+        <Title>BLOG</Title>
+        <Button>SUBMIT</Button>
         <Footer />
       </main>
     </div>
