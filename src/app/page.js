@@ -1,12 +1,12 @@
 // import IndexHero from "./components/index/IndexHero";
 import Header from "./components/Header";
-// import Welcome from "./components/index/Welcome";
-// import EventMonth from "./components/index/EventMonth";
-// import Gallery from "./components/index/Gallery";
-// import MusicCarousel from "./components/index/MusicCarousel";
-// import VideoCarousel from "./components/index/VideoCarousel";
+import Welcome from "./components/index/Welcome";
+import EventMonth from "./components/index/EventMonth";
+import Gallery from "./components/index/Gallery";
+import MusicCarousel from "./components/index/MusicCarousel";
+import VideoCarousel from "./components/index/VideoCarousel";
 // import Testimonials from "./components/index/Testimonials";
-// import RecentBlog from "./components/index/RecentBlog";
+import RecentBlog from "./components/index/RecentBlog";
 // import EmailForm from "./components/index/EmailForm";
 import Button from "./components/Button";
 import Footer from "./components/Footer";
@@ -17,14 +17,14 @@ export default function Home() {
       <main className="">
         {/* <IndexHero /> */}
         <Header />
-        {/* <Welcome />
+        <Welcome />
         <EventMonth />
         <Gallery />
         <MusicCarousel />
         <VideoCarousel />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <RecentBlog />
-        <EmailForm /> */}
+        {/* <EmailForm /> */}
         <Button>READ MORE</Button>
         <Footer />
       </main>

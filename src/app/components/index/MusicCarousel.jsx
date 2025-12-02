@@ -1,5 +1,7 @@
+import Title from "../Title";
+
 const MusicCarousel = () => {
-    return ( <div></div> );
-}
- 
+  return <Title>NIGHT CLUB Track</Title>;
+};
+
 export default MusicCarousel;
