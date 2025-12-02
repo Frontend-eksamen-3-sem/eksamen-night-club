@@ -1,5 +1,7 @@
+import Title from "../Title";
+
 const EventMonth = () => {
-    return ( <div></div> );
-}
- 
+  return <Title>EVENTS OF THE MONTH</Title>;
+};
+
 export default EventMonth;
