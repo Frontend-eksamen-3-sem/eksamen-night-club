@@ -8,6 +8,7 @@ import Header from "./components/Header";
 // import Testimonials from "./components/index/Testimonials";
 // import RecentBlog from "./components/index/RecentBlog";
 // import EmailForm from "./components/index/EmailForm";
+import Button from "./components/Button";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <Testimonials />
         <RecentBlog />
         <EmailForm /> */}
+        <Button>READ MORE</Button>
         <Footer />
       </main>
     </div>
