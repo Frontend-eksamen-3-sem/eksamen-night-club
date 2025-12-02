@@ -1,5 +1,5 @@
 import Header from "../../components/Header";
-import Title from "../../components/Title";
+import Hero from "../../components/Hero";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 
@@ -8,7 +8,7 @@ export default function Blog() {
     <div className="">
       <main className="">
         <Header />
-        <Title>BLOG</Title>
+        <Hero>BLOG</Hero>
         <Button>READ MORE</Button>
         <Footer />
       </main>

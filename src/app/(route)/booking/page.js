@@ -1,14 +1,14 @@
 import Header from "../../components/Header";
-import Title from "../../components/Title";
+import Hero from "../../components/Hero";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 
-export default function Blog() {
+export default function Booking() {
   return (
     <div className="">
       <main className="">
         <Header />
-        <Title>BLOG</Title>
+        <Hero>BOOK TABLE</Hero>
         <Button>RESERVE</Button>
         <Footer />
       </main>
