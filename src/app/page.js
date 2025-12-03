@@ -14,9 +14,11 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <main className=" grid">
+      <header className="grid col-[full]">
         {/* <IndexHero /> */}
         <Header />
+      </header>
+      <main className="grid">
         <Welcome />
         <EventMonth />
         <Gallery />

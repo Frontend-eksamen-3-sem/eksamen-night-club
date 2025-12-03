@@ -37,7 +37,6 @@ body {
 
 main {
   grid-column: content;
-
   background-color: var(--color-background);
   font-family: var(--font-family);
 }
