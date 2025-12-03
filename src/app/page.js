@@ -11,6 +11,9 @@ import RecentBlog from "./components/index/RecentBlog";
 import Button from "./components/Button";
 import Footer from "./components/Footer";
 
+import Image from "next/image";
+import Footerbg from "@/assets/bg/footerbg.jpg";
+
 export default function Home() {
   return (
     <>
@@ -28,14 +31,15 @@ export default function Home() {
         <RecentBlog />
         {/* <EmailForm /> */}
         <Button>READ MORE</Button>
-        <Footer />
       </main>
 
-      <footer className="grid "></footer>
+      <footer className="grid col-[full] grid-cols-subgrid" >
+        <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
+        <div className="grid col-[content] row-start-1">
+          <Footer />
+        </div>
+      </footer>
 
-      {/* <foote className="col-[full] grid">
-   
-      </footer> */}
     </>
   );
 }
