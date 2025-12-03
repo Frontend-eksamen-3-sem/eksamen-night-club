@@ -14,6 +14,7 @@
   --background: #000000;
   --pink: #ff2a70;
   --white: #ffffff;
+  /* --bg-footer: url("/assets/bg/footerbg.jpg"); */
 
   --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
@@ -24,6 +25,13 @@
   --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
 }
+
+/* [data-surface="footer"] {
+  background-image: var(--bg-footer);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+} */
 
 body {
   background-color: var(--background);
@@ -63,10 +71,19 @@ h3 {
   margin-bottom: 1rem;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  color: var(--white);
+  color: var(--pink);
 }
 
 h4 {
+font-size: var(--step--2);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  color: var(--pink);
+}
+
+h5 {
   font-size: var(--step--2);
   line-height: 1.1;
   margin-bottom: 0.5rem;
