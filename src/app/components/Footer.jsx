@@ -1,11 +1,11 @@
 import Image from "next/image";
-// import Footerbg from "../../../public/assets/bg/footerbg.jpg";
+import Footerbg from "../../../public/assets/footer_bg.png"
 
 const Footer = () => {
   return (
     <section className="grid ">
       <div className="grid grid-cols-subgrid grid-rows-subgrid col-[content] bg-black ">
-        {/* <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-20 " /> */}
+        <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-20 " />
         <div className="grid z-10  gap-2">
           <div className="grid col-1 row-start-1 row-end-5 ">
             <p>LOGO</p>
