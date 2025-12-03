@@ -13,10 +13,12 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="">
+    <>
+      <header className="grid col-[full]">
         {/* <IndexHero /> */}
         <Header />
+      </header>
+      <main className="grid">
         <Welcome />
         <EventMonth />
         <Gallery />
@@ -28,6 +30,12 @@ export default function Home() {
         <Button>READ MORE</Button>
         <Footer />
       </main>
-    </div>
+
+      <footer className="grid "></footer>
+
+      {/* <foote className="col-[full] grid">
+   
+      </footer> */}
+    </>
   );
 }

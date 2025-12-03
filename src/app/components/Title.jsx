@@ -1,6 +1,5 @@
 import Image from "next/image";
-import BottomLine from "../../../assets/bottom_line.png";
-
+import BottomLine from "@/assets/bottom_line.png"
 const Title = ({ children, className = "" }) => {
   return (
     <div className={`w-full ${className}`}>

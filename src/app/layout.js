@@ -1,5 +1,8 @@
 
 import { Ubuntu } from "next/font/google";
+
+
+import "./reset.css";
 import "./globals.css";
 
 const ubuntu = Ubuntu({
