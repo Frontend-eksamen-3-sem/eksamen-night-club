@@ -7,8 +7,8 @@
   --font-family: var(--font-ubuntu);
 }
 
-:root {
-  --content-width: 1200px;
+:root { 
+  --content-width: 1200px; 
   --text-max-width: 65ch;
 
   --background: #000000;
@@ -53,46 +53,52 @@ h1 {
   font-size: var(--step-2);
   font-weight: 700;
   line-height: 1.1;
+  font-family: var(--font-ubuntu);
   color: var(--white);
 }
 
 h2 {
   font-size: var(--step--1);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  /* line-height: 1.1;
+  margin-bottom: 1rem; */
   font-weight: bold;
+  font-family: var(--font-ubuntu);
   color: var(--dark-text);
   color: var(--white);
 }
 
 h3 {
   font-size: var(--step--2);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  /* line-height: 1.1;
+  margin-bottom: 1rem; */
   color: rgb(0, 0, 0);
+  font-family: var(--font-ubuntu);
   font-weight: bold;
   color: var(--pink);
 }
 
 h4 {
 font-size: var(--step--2);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  /* line-height: 1.1;
+  margin-bottom: 1rem; */
   color: rgb(0, 0, 0);
+  font-family: var(--font-ubuntu);
   font-weight: bold;
   color: var(--pink);
 }
 
 h5 {
   font-size: var(--step--2);
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
+  /* line-height: 1.1;
+  margin-bottom: 0.5rem; */
+  font-family: var(--font-ubuntu);
   color: var(--white);
 }
 
 p {
   font-size: var(--step--2);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  /* line-height: 1.6;
+  margin-bottom: 1.5rem; */
+  font-family: var(--font-ubuntu);
   color: var(--white);
 }
