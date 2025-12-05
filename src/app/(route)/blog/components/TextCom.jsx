@@ -1,9 +1,9 @@
-const TextComp = () => {
+const TextComp = ({ title, subtitle, children }) => {
   return (
     <div>
-      <h2 className="pb-1 uppercase">Overskrift</h2>
-      <h3 className="pb-2 uppercase">Author og date</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nemo eum, voluptates aut reprehenderit quas cupiditate adipisci est magni sit eaque, delectus blanditiis ipsam animi provident cum ratione veniam sunt.</p>
+      <h2 className="pb-1 uppercase">{title}</h2>
+      <h3 className="pb-2 uppercase">{subtitle}</h3>
+      <p>{children}</p>
     </div>
   );
 };
