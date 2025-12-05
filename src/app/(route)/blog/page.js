@@ -2,16 +2,35 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
+import TextCom from "./components/TextCom";
+
+import Image from "next/image";
+import Footerbg from "@/assets/bg/footerbg.jpg";
+
 
 export default function Blog() {
   return (
-    <div className="">
-      <main className="">
+    <>
+      <header className="grid grid-cols-subgrid col-[full] ">
+        {/* <IndexHero /> */}
+
         <Header />
+      </header>
+
+      <main className="grid col-[content]">
         <Hero>BLOG</Hero>
-        <Button>READ MORE</Button>
-        <Footer />
+        {/* <Button>READ MORE</Button> */}
+        <div className="grid grid-cols-2">
+          <TextCom />
+        </div>
       </main>
-    </div>
+
+      <footer className="grid col-[full] grid-cols-subgrid">
+        <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
+        <div className="grid col-[content] row-start-1">
+          <Footer />
+        </div>
+      </footer>
+    </>
   );
 }

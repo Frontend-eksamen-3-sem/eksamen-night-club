@@ -8,8 +8,8 @@ const Header = () => {
   const [isSelect, setIsSelect] = useState(false);
 
   return (
-    <header className="grid grid-cols-subgrid col-[full] border-t-2 border-b-2 border-accent font-semibold cursor-pointer top-0 capitalize bg-black text-white sticky p-4 ">
-      <div className="grid col-[content] ">
+    <section className="grid grid-cols-subgrid col-[full] border-t-2 border-b-2 border-accent font-semibold cursor-pointer top-0 capitalize bg-black text-white sticky p-4 ">
+      <div className="grid col-[content]">
         <div className="flex justify-between items-center">
           <div>
             <Link href="/">
@@ -63,7 +63,7 @@ const Header = () => {
           )}
         </div> */}
       </div>
-    </header>
+    </section>
   );
 };
 

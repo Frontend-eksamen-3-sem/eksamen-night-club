@@ -17,8 +17,10 @@ import Footerbg from "@/assets/bg/footerbg.jpg";
 export default function Home() {
   return (
     <>
-      {/* <IndexHero /> */}
-      <Header />
+      <header className="grid grid-cols-subgrid col-[full] ">
+        {/* <IndexHero /> */}
+        <Header />
+      </header>
 
       <main className="grid">
         <Welcome />
@@ -32,13 +34,12 @@ export default function Home() {
         <Button>READ MORE</Button>
       </main>
 
-      <footer className="grid col-[full] grid-cols-subgrid" >
+      <footer className="grid col-[full] grid-cols-subgrid">
         <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
         <div className="grid col-[content] row-start-1">
           <Footer />
         </div>
       </footer>
-
     </>
   );
 }
