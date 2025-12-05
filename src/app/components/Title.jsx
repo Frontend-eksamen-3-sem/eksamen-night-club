@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BottomLine from "@/assets/bottom_line.png";
+import BottomLine from "@/assets/bottom_line2.png";
 const Title = ({ children, className = "" }) => {
   return (
     <div className={`w-full grid col-[content] ${className}`}>
