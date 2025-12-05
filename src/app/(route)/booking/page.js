@@ -1,10 +1,10 @@
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import TableGrid from "./components/TableGrid";
-import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
+import BookingForm from "./components/BookingForm";
 
 export default function Booking() {
   return (
@@ -16,8 +16,8 @@ export default function Booking() {
       </header>
       <main className="grid col-[content]">
         <Hero>BOOK TABLE</Hero>
-        <Button>RESERVE</Button>
         <TableGrid />
+        <BookingForm />
       </main>
       <footer className="grid col-[full] grid-cols-subgrid">
         <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
