@@ -6,6 +6,7 @@ import TextCom from "./components/TextCom";
 
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
+import BlogCard from "./components/BlogCard";
 
 
 export default function Blog() {
@@ -20,9 +21,7 @@ export default function Blog() {
       <main className="grid col-[content]">
         <Hero>BLOG</Hero>
         {/* <Button>READ MORE</Button> */}
-        <div className="grid grid-cols-2">
-          <TextCom />
-        </div>
+        <BlogCard />
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
