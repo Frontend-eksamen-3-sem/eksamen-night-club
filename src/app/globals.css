@@ -44,7 +44,9 @@ body {
 }
 
 main {
-  /* grid-column: content; */
+  grid-column: full;
+  display: grid;
+  grid-template-columns: inherit;
   background-color: var(--background);
   font-family: var(--font-family);
 }

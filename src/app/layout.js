@@ -1,6 +1,4 @@
-
 import { Ubuntu } from "next/font/google";
-
 
 import "./reset.css";
 import "./globals.css";
@@ -10,7 +8,6 @@ const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
   variable: "--font-ubuntu",
 });
-
 
 export const metadata = {
   title: "Night Club",

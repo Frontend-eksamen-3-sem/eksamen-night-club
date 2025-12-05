@@ -6,7 +6,7 @@ import Pic3 from "@/assets/content-img/thumb2.jpg";
 
 const Welcome = () => {
   return (
-    <section className="grid">
+    <section className="col-[content]">
       <Title>WELCOME IN NIGHTCLUB</Title>
       <div className="grid md:grid-cols-3 gap-4">
         <Image src={Pic1} alt="welcome picture 1" title="Overskrift 1" text="Kort beskrivelse 1" />
