@@ -2,21 +2,27 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
+import TextCom from "./components/TextCom";
 
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
+
 
 export default function Blog() {
   return (
     <>
       <header className="grid grid-cols-subgrid col-[full] ">
         {/* <IndexHero /> */}
+
         <Header />
       </header>
 
       <main className="grid col-[content]">
         <Hero>BLOG</Hero>
-        <Button>READ MORE</Button>
+        {/* <Button>READ MORE</Button> */}
+        <div className="grid grid-cols-2">
+          <TextCom />
+        </div>
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
