@@ -3,7 +3,6 @@ import Hero from "../../components/Hero";
 import TableGrid from "./components/TableGrid";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
-
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
 
