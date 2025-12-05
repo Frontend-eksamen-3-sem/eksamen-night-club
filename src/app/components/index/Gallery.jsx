@@ -10,9 +10,9 @@ import Gallery7 from "@/assets/content-img/gallery7_big.jpg";
 
 const Gallery = () => {
   return (
-    <section className="grid col-[full]">
+    <div className="col-[full] ">
       <Title>NIGHT CLUB GALLERY</Title>
-      <div cladssName="grid gap-2">
+      <div className="flex">
         <Image src={Gallery1} alt="Gallery Image 1" width={500} height={500} />
         <Image src={Gallery2} alt="Gallery Image 2" width={500} height={500} />
         <Image src={Gallery3} alt="Gallery Image 3" width={500} height={500} />
@@ -21,7 +21,7 @@ const Gallery = () => {
         <Image src={Gallery6} alt="Gallery Image 6" width={500} height={500} />
         <Image src={Gallery7} alt="Gallery Image 7" width={500} height={500} />
       </div>
-    </section>
+    </div>
   );
 };
 

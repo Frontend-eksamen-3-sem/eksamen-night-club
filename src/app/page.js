@@ -22,10 +22,10 @@ export default function Home() {
         <Header />
       </header>
 
-      <main className="grid col-[content]">
-        {/* <Welcome /> */}
+      <main>
+        <Welcome />
         <EventMonth />
-        <Gallery className="grid col-[full]" />
+        <Gallery />
         <MusicCarousel />
         <VideoCarousel />
         {/* <Testimonials /> */}
