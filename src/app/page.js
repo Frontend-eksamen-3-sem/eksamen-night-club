@@ -20,10 +20,10 @@ export default function Home() {
       {/* <IndexHero /> */}
       <Header />
 
-      <main className="grid">
-        <Welcome />
+      <main className="grid col-[content]">
+        {/* <Welcome /> */}
         <EventMonth />
-        <Gallery />
+        <Gallery className="grid col-[full]" />
         <MusicCarousel />
         <VideoCarousel />
         {/* <Testimonials /> */}
@@ -32,13 +32,12 @@ export default function Home() {
         <Button>READ MORE</Button>
       </main>
 
-      <footer className="grid col-[full] grid-cols-subgrid" >
+      <footer className="grid col-[full] grid-cols-subgrid">
         <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
         <div className="grid col-[content] row-start-1">
           <Footer />
         </div>
       </footer>
-
     </>
   );
 }
