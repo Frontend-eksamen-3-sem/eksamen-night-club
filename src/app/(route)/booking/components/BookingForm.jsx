@@ -25,8 +25,8 @@ const BookingForm = ({ selectedTableNumber }) => {
   };
 
   return (
-    <>
-      <h1 className="text-3xl font-bold mb-6">Book a Table</h1>
+    <section>
+      <h1 className="mb-6">Book a Table</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="text-white">
         <div className="grid grid-cols-2 mb-4">
@@ -110,12 +110,7 @@ const BookingForm = ({ selectedTableNumber }) => {
           </div>
 
           <div>
-            <Controller name="date" control={control} rules={{ required: "Please select a date" }} defaultValue="" render={({ field }) => <DatePicker selected={field.value ? new Date(field.value) : null} onChange={(d) => field.onChange(d ? d.toISOString().split("T")[0] : "")} minDate={new Date()} dateFormat="yyyy-MM-dd" className="w-full p-2 border border-white rounded-none bg-transparent text-white" placeholderText="Select date" />} />
-            {errors.date && (
-              <p role="alert" className="text-sm text-red-400 mt-1">
-                {errors.date.message}
-              </p>
-            )}
+            <Controller name="date" control={control} rules={{ required: "Please select a date" }} defaultValue="" render={({ field }) => <DatePicker selected={field.value ? new Date(field.value) : null} onChange={(d) => field.onChange(d ? d.toISOString().split("T")[0] : "")} minDate={new Date()} dateFormat="yyyy-MM-dd" className="w-full p-2 border border-white rounded-none bg-transparent text-white" wrapperClassName="w-full" placeholderText="Select date" />} />
           </div>
 
           <div>
@@ -142,7 +137,7 @@ const BookingForm = ({ selectedTableNumber }) => {
           <Button type="submit">RESERVE</Button>
         </div>
       </form>
-    </>
+    </section>
   );
 };
 
