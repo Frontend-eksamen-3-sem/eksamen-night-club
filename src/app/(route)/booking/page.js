@@ -10,9 +10,14 @@ export default function Booking() {
     <>
       <header className="grid grid-cols-subgrid col-[full] ">
         <Header />
+        <section className="grid col-[full] grid-cols-subgrid">
+          <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full object-cover z-0 opacity-10 h-30" />
+          <div className="grid col-[content] row-start-1">
+            <Hero>BOOK TABLE</Hero>
+          </div>
+        </section>
       </header>
       <main>
-        <Hero>BOOK TABLE</Hero>
         <BookingClient />
       </main>
       <footer className="grid col-[full] grid-cols-subgrid">
