@@ -86,7 +86,7 @@ const BookingForm = ({ selectedTableNumber }) => {
             {errors.guests && <span className="text-sm text-red-400 mt-1">{errors.guests.message}</span>}
           </div>
           <div className="w-full">
-            <Controller name="date" control={control} defaultValue={null} rules={{ required: "Date is required" }} render={({ field }) => <DatePicker selected={field.value} onChange={field.onChange} placeholderText="Select date" className="w-full p-2 border border-white rounded-none bg-transparent block react-datepicker-wrapper react-datepicker_input-container" />} />
+            <Controller name="date" control={control} defaultValue={null} rules={{ required: "Date is required" }} render={({ field }) => <DatePicker className="w-full p-2 border border-white rounded-none bg-transparent" selected={field.value} onChange={field.onChange} placeholderText="Select date" />} />
             {errors.date && <span className="text-sm text-red-400 mt-1">{errors.date.message}</span>}
           </div>
           <div>
