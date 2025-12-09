@@ -11,7 +11,7 @@ export default function Booking() {
       <header className="grid grid-cols-subgrid col-[full] ">
         <Header />
       </header>
-      <main className="grid col-[content]">
+      <main>
         <Hero>BOOK TABLE</Hero>
         <BookingClient />
       </main>

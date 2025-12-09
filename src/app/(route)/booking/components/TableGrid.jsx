@@ -5,7 +5,7 @@ import TableCard from "./TableCard";
 
 const TableGrid = ({ onSelectTable, selectedTable }) => {
   return (
-    <section className="grid grid-cols-5 gap-4 p-4">
+    <div className="grid grid-cols-5 gap-4 p-4">
       <TableCard src={Table4} number={1} onSelect={onSelectTable} isSelected={selectedTable === 1} />
       <TableCard src={Table4} number={2} onSelect={onSelectTable} isSelected={selectedTable === 2} />
       <TableCard src={Table6} number={3} onSelect={onSelectTable} isSelected={selectedTable === 3} />
@@ -21,7 +21,7 @@ const TableGrid = ({ onSelectTable, selectedTable }) => {
       <TableCard src={Table6} number={13} onSelect={onSelectTable} isSelected={selectedTable === 13} />
       <TableCard src={Table4} number={14} onSelect={onSelectTable} isSelected={selectedTable === 14} />
       <TableCard src={Table8} number={15} onSelect={onSelectTable} isSelected={selectedTable === 15} />
-    </section>
+    </div>
   );
 };
 

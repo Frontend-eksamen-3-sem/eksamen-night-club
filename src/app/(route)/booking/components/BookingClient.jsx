@@ -11,7 +11,7 @@ export default function BookingClient() {
   };
 
   return (
-    <div>
+    <div className="col-[content]">
       <TableGrid onSelectTable={handleSelectTable} selectedTable={selectedTableNumber} />
       <BookingForm selectedTableNumber={selectedTableNumber} />
     </div>
