@@ -3,25 +3,32 @@ import Hero from "../../components/Hero";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import TextCom from "./components/TextCom";
+import { Suspense } from "react";
 
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
 import BlogCard from "./components/BlogCard";
 
-
-export default function Blog() {
+export default function Blog({ searchParams }) {
   return (
     <>
       <header className="grid grid-cols-subgrid col-[full] ">
         {/* <IndexHero /> */}
 
         <Header />
+        <section className="grid col-[full] grid-cols-subgrid">
+          <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full object-cover z-0 opacity-10 h-30" />
+          <div className="grid col-[content] row-start-1">
+            <Hero>BLOG</Hero>
+          </div>
+        </section>
       </header>
 
-      <main className="grid col-[content]">
-        <Hero>BLOG</Hero>
+      <main className="grid ">
         {/* <Button>READ MORE</Button> */}
-        <BlogCard />
+        <Suspense fallback={<div className="p-4">Loading blog posts…</div>}>
+          <BlogCardContainer searchParams={searchParams} />
+        </Suspense>
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
@@ -32,4 +39,11 @@ export default function Blog() {
       </footer>
     </>
   );
+}
+
+async function BlogCardContainer({ searchParams }) {
+  const params = await searchParams; // det er lovligt HER
+  const page = Number(params.page) || 1;
+
+  return <BlogCard page={page} />;
 }
