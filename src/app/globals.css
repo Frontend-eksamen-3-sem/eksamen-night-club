@@ -108,3 +108,10 @@ p {
 .custom-btn:hover {
   font-weight: 600;
 }
+
+/* overskriver react datepicker styles på booking-siden */
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100%;
+  display: block;
+}
