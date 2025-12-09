@@ -94,3 +94,17 @@ p {
   font-family: var(--font-ubuntu);
   color: var(--white);
 }
+
+.custom-btn {
+  font-size: var(--step--2);
+  font-weight: 500;
+  font-family: var(--font-ubuntu);
+  color: var(--white);
+  padding: 0.8em 1.8em;
+  border: none;
+
+  cursor: pointer;
+}
+.custom-btn:hover {
+  font-weight: 600;
+}
