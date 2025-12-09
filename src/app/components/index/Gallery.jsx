@@ -12,14 +12,14 @@ const Gallery = () => {
   return (
     <div className="col-[full] ">
       <Title>NIGHT CLUB GALLERY</Title>
-      <div className="flex">
-        <Image src={Gallery1} alt="Gallery Image 1" width={500} height={500} />
-        <Image src={Gallery2} alt="Gallery Image 2" width={500} height={500} />
-        <Image src={Gallery3} alt="Gallery Image 3" width={500} height={500} />
-        <Image src={Gallery4} alt="Gallery Image 4" width={500} height={500} />
-        <Image src={Gallery5} alt="Gallery Image 5" width={500} height={500} />
-        <Image src={Gallery6} alt="Gallery Image 6" width={500} height={500} />
-        <Image src={Gallery7} alt="Gallery Image 7" width={500} height={500} />
+      <div className="grid grid-cols-6 grid-rows-2 items-stretch">
+        <Image className="col-start-1 col-end-3 row-span-1 h-full w-full object-cover" src={Gallery1} alt="Gallery Image 1" />
+        <Image className="col-start-3 col-end-4 row-span-1 h-full w-full object-cover" src={Gallery2} alt="Gallery Image 2" />
+        <Image className="col-start-4 col-end-6 row-span-1 h-full w-full object-cover" src={Gallery3} alt="Gallery Image 3" />
+        <Image className="col-start-6 col-end-7 row-span-1 h-full w-full object-cover" src={Gallery4} alt="Gallery Image 4" />
+        <Image className="col-start-1 col-end-3 row-span-2 h-full w-full object-cover" src={Gallery5} alt="Gallery Image 5" />
+        <Image className="col-start-3 col-end-5 row-span-2 h-full w-full object-cover" src={Gallery6} alt="Gallery Image 6" />
+        <Image className="col-start-5 col-end-7 row-span-2 h-full w-full object-cover" src={Gallery7} alt="Gallery Image 7" />
       </div>
     </div>
   );
