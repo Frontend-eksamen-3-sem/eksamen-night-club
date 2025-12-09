@@ -12,7 +12,7 @@ const BookingForm = ({ selectedTableNumber }) => {
     handleSubmit,
     formState: { errors },
     setValue,
-  } = useForm({ mode: "onTouched" });
+  } = useForm({ mode: "onChange" });
 
   useEffect(() => {
     if (selectedTableNumber) {
