@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
     "motion": "^12.23.25",
     "next": "16.0.6",
     "react": "19.2.0",
