@@ -104,3 +104,12 @@ p {
   font-family: var(--font-ubuntu);
   color: var(--white);
 }
+
+.react-datepicker-wrapper,
+.react-datepicker_input-container {
+  width: 100%;
+  display: block;
+  border: white solid 1px;
+  border-radius: none;
+  padding: 8px;
+}
