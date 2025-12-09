@@ -105,7 +105,9 @@ const BookingForm = ({ selectedTableNumber }) => {
 
         <div className="flex flex-col gap-4">
           <textarea placeholder="Your Comment" {...register("comment")} className="p-2 border border-white rounded-none bg-transparent" />
-          <Button type="submit">RESERVE</Button>
+          <Button type="submit" className="ml-auto block">
+            RESERVE
+          </Button>
         </div>
       </form>
     </section>
