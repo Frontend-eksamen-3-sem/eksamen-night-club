@@ -3,9 +3,11 @@ import BottomLine from "@/assets/bottom_line.png";
 
 const Hero = ({ children, className = "" }) => {
   return (
-    <div className={`w-full col-[content] ${className}`}>
+    <div className={`w-full max-w-md mx-auto mt-8 ${className}`}>
       <h1 className="w-full text-center">{children}</h1>
-      <Image src={BottomLine} alt="title underline img" className="mx-auto mt-3" />
+      <div className="w-full max-w-50 mx-auto mt-3">
+        <Image src={BottomLine} alt="title underline img" />
+      </div>
     </div>
   );
 };

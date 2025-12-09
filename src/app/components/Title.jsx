@@ -1,10 +1,10 @@
 import Image from "next/image";
-import BottomLine from "@/assets/bottom_line2.png";
+import BottomLine from "@/assets/bottom_line.png";
 const Title = ({ children, className = "" }) => {
   return (
-    <div className={`w-full grid col-[content] ${className}`}>
-      <h1 className="w-full text-center">{children}</h1>
-      <Image src={BottomLine} alt="title underline img" className="mx-auto mt-3" />
+    <div className={`w-full max-w-md mx-auto flex flex-col items-center ${className}`}>
+      <h1 className="w-fit text-center">{children}</h1>
+      <Image src={BottomLine} alt="title underline img" className="w-full" />
     </div>
   );
 };
