@@ -1,19 +1,26 @@
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
-import TableGrid from "./components/TableGrid";
-import Button from "../../components/Button";
+import BookingClient from "./components/BookingClient";
 import Footer from "../../components/Footer";
+import Image from "next/image";
+import Footerbg from "@/assets/bg/footerbg.jpg";
 
 export default function Booking() {
   return (
-    <div className="">
-      <main className="">
+    <>
+      <header className="grid grid-cols-subgrid col-[full] ">
         <Header />
+      </header>
+      <main>
         <Hero>BOOK TABLE</Hero>
-        <Button>RESERVE</Button>
-        <TableGrid />
-        <Footer />
+        <BookingClient />
       </main>
-    </div>
+      <footer className="grid col-[full] grid-cols-subgrid">
+        <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
+        <div className="grid col-[content] row-start-1">
+          <Footer />
+        </div>
+      </footer>
+    </>
   );
 }

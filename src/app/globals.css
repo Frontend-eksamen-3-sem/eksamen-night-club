@@ -7,8 +7,8 @@
   --font-family: var(--font-ubuntu);
 }
 
-:root { 
-  --content-width: 1200px; 
+:root {
+  --content-width: 1200px;
   --text-max-width: 65ch;
 
   --background: #000000;
@@ -44,7 +44,9 @@ body {
 }
 
 main {
-  grid-column: content;
+  grid-column: full;
+  display: grid;
+  grid-template-columns: inherit;
   background-color: var(--background);
   font-family: var(--font-family);
 }
@@ -78,7 +80,7 @@ h3 {
 }
 
 h4 {
-font-size: var(--step--2);
+  font-size: var(--step--2);
   /* line-height: 1.1;
   margin-bottom: 1rem; */
   color: rgb(0, 0, 0);
@@ -101,4 +103,13 @@ p {
   margin-bottom: 1.5rem; */
   font-family: var(--font-ubuntu);
   color: var(--white);
+}
+
+.react-datepicker-wrapper,
+.react-datepicker_input-container {
+  width: 100%;
+  display: block;
+  border: white solid 1px;
+  border-radius: none;
+  padding: 8px;
 }

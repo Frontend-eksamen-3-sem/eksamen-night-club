@@ -22,7 +22,7 @@ export default function Home() {
         <Header />
       </header>
 
-      <main className="grid">
+      <main>
         <Welcome />
         <EventMonth />
         <Gallery />
