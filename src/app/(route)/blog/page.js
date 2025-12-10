@@ -13,8 +13,6 @@ export default function Blog({ searchParams }) {
   return (
     <>
       <header className="grid grid-cols-subgrid col-[full] ">
-        {/* <IndexHero /> */}
-
         <Header />
         <section className="grid col-[full] grid-cols-subgrid">
           <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full object-cover z-0 opacity-10 h-30" />
@@ -25,7 +23,6 @@ export default function Blog({ searchParams }) {
       </header>
 
       <main className="grid ">
-        {/* <Button>READ MORE</Button> */}
         <Suspense fallback={<div className="p-4">Loading blog posts…</div>}>
           <BlogCardContainer searchParams={searchParams} />
         </Suspense>
@@ -42,7 +39,7 @@ export default function Blog({ searchParams }) {
 }
 
 async function BlogCardContainer({ searchParams }) {
-  const params = await searchParams; // det er lovligt HER
+  const params = await searchParams; 
   const page = Number(params.page) || 1;
 
   return <BlogCard page={page} />;
