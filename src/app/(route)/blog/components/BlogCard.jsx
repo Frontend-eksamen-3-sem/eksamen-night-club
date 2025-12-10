@@ -4,10 +4,11 @@ import Image from "next/image";
 import { Suspense } from "react";
 import BlogFallback from "@/assets/content-img/blog_full1.jpg";
 import Pagination from "./Pagination";
+import Link from "next/link";
 
 const BlogCard = ({ page }) => {
   return (
-    <section className="grid grid-cols-subgrid col-start-1 col-end-6">
+    <section className="grid grid-cols-subgrid col-start-1 col-end-6 pt-10">
       <Suspense fallback={<div>Loading…</div>}>
         <FetchBlogCard page={page} />
       </Suspense>
@@ -29,7 +30,7 @@ const FetchBlogCard = async ({ page = 1 }) => {
   const totalPages = Math.ceil(posts.length / limit);
 
   return (
-    <div className="grid gap-12 col-[content]">
+    <div className="grid gap-12 col-[full]">
       {currentPosts.map((post, index) => {
         const isEven = index % 2 === 1;
 
@@ -39,7 +40,8 @@ const FetchBlogCard = async ({ page = 1 }) => {
             className="
               grid gap-12 
               md:grid-cols-2
-            ">
+            "
+          >
             <Image
               src={post.asset?.url || BlogFallback}
               alt={post.title}
@@ -49,20 +51,28 @@ const FetchBlogCard = async ({ page = 1 }) => {
               className={`
                 w-full h-auto block
                 ${isEven ? "md:order-2" : "md:order-1"}
-                ${isEven ? "md:-mr-[max(0px,calc(50vw-600px))]" : ""}
-                ${!isEven ? "md:-ml-[max(0px,calc(50vw-600px))]" : ""}
-              `}/>
+                
+              `}
+            />
 
             <div
               className={`
                 ${isEven ? "md:order-1" : "md:order-2"}
                grid items-center
                 px-4 md:px-0 
-              `}>
-              <TextComp title={post.title} subtitle={post.author}>
-                {post.content?.slice(0, 500)}...
-              </TextComp>
-              <Button>Read more</Button>
+              `}
+            >
+              <div className="">
+                <TextComp title={post.title} subtitle={post.author}>
+                  {post.content?.slice(0, 500)}...
+                </TextComp>
+              </div>
+
+              <div className="flex">
+                <Link href={`/blog/${post.id}`}>
+                  <Button>Read more</Button>
+                </Link>
+              </div>
             </div>
           </div>
         );
