@@ -4,6 +4,8 @@ import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
 import SingleBlogPost from "../components/SingleBlogPost";
+import Blogform from "../components/BlogForm";
+import CommentCard from "../components/CommentCard";
 import { Suspense } from "react";
 
 export default function BlogPosts({ params }) {
@@ -21,8 +23,9 @@ export default function BlogPosts({ params }) {
 
       <main className="">
         <Suspense fallback={<div className="p-4">Loading blog post…</div>}>
-        <SingleBlogPost params={params} />
+          <SingleBlogPost params={params} />
         </Suspense>
+        <Blogform />
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
