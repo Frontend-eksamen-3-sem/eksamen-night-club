@@ -1,17 +1,36 @@
-import Header from "../../components/Header";
-import Hero from "../../components/Hero";
-import Hero from "../../components/Hero";
-import Footer from "../../components/Footer";
+import Header from "../../../components/Header";
+import Hero from "../../../components/Hero";
+import Footer from "../../../components/Footer";
+import Image from "next/image";
+import Footerbg from "@/assets/bg/footerbg.jpg";
+import SingleBlogPost from "../components/SingleBlogPost";
+import { Suspense } from "react";
 
-export default function BlogPost() {
+export default function BlogPosts({ params }) {
   return (
-    <div className="">
-      <main className="">
+    <>
+      <header className="grid grid-cols-subgrid col-[full]">
         <Header />
-        <Hero>BLOG POST</Hero>
-        <Button>SUBMIT</Button>
-        <Footer />
+        <section className="grid col-[full] grid-cols-subgrid">
+          <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full object-cover z-0 opacity-10 h-30" />
+          <div className="grid col-[content] row-start-1">
+            <Hero>BLOG POST</Hero>
+          </div>
+        </section>
+      </header>
+
+      <main className="">
+        <Suspense fallback={<div className="p-4">Loading blog post…</div>}>
+        <SingleBlogPost params={params} />
+        </Suspense>
       </main>
-    </div>
+
+      <footer className="grid col-[full] grid-cols-subgrid">
+        <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
+        <div className="grid col-[content] row-start-1">
+          <Footer />
+        </div>
+      </footer>
+    </>
   );
 }
