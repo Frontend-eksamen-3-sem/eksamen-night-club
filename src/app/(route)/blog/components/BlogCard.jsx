@@ -62,13 +62,13 @@ const FetchBlogCard = async ({ page = 1 }) => {
                 px-4 md:px-0 
               `}
             >
-              <div className="">
+              <div className="max-w-[500px] w-full mx-auto px-4">
                 <TextComp title={post.title} subtitle={post.author}>
                   {post.content?.slice(0, 500)}...
                 </TextComp>
               </div>
 
-              <div className="flex">
+              <div className="flex justify-end max-w-[600px] w-full  px-4">
                 <Link href={`/blog/${post.id}`}>
                   <Button>Read more</Button>
                 </Link>
