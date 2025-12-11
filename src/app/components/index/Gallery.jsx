@@ -20,13 +20,13 @@ export default Gallery;
 const FetchGallery = async () => {
   "use server";
   const response = await fetch("http://localhost:4000/gallery");
-  const image = await response.json();
+  const images = await response.json();
 
-  const maxseven = image.slice(0, 7);
+  const maxseven = images.slice(0, 7);
 
   return (
     <>
-      <GalleryClient image={maxseven} />;
+      <GalleryClient images={maxseven} />;
     </>
   );
 };
