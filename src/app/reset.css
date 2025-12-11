@@ -141,7 +141,7 @@ textarea,
 select {
   font: inherit;
   border-radius: 0;
-  color: inherit;
+  /* color: inherit; */
   background: transparent;
   font-size: max(1em, 16px);
 }
