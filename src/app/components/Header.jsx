@@ -1,20 +1,28 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
-import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+import BottomLine from "@/assets/bottom_line2.png";
+import Logo from "@/assets/Logo.png";
+import { IoMdClose } from "react-icons/io";
 
 const Header = () => {
   const [isSelect, setIsSelect] = useState(false);
 
+  const currentPath = usePathname();
+
   return (
-    <section className="grid grid-cols-subgrid col-[full] border-t-2 border-b-2 border-accent font-semibold top-0 capitalize bg-black text-white sticky p-4 ">
-      <div className="grid col-[content]">
+    <section className="grid grid-cols-subgrid col-[full] border-t-2 border-b-2 border-accent font-semibold capitalize bg-black items-center text-white sticky  ">
+      <div className="col-start-1 row-start-1 self-start w-0 h-0 border-l-accent border-l-25 border-b-25 border-b-transparent md:border-l-30 md:border-b-30 " />
+      <div className="col-start-4 row-end-2 self-end w-0 h-0 border-r-25 border-r-accent border-t-25 border-t-transparent justify-self-end md:border-r-30 md:border-t-30" />
+
+      <div className="grid col-[content] h-15">
         <div className="flex justify-between items-center">
           <div>
             <Link href="/">
-              <Image src="/assets/Logo.png" alt="Logo" width={150} height={150} />
+              <Image src={Logo} alt="Logo" width={150} height={150} />
             </Link>
           </div>
 
@@ -27,18 +35,24 @@ const Header = () => {
 
           {/* Desktop menu */}
           <nav className="hidden md:flex">
-            <ul className="flex gap-5 list-none w-full justify-between">
-              <li className="hover:text-accent">
-                <Link href="/blog">HOME</Link>
+            <ul className="flex gap-8 list-none w-full justify-between">
+              <li className={`flex w-[110] flex-col items-center ${currentPath === "/" ? "text-accent" : "hover:text-accent"}`}>
+                <Link href="/">HOME</Link>
+                <div className=" flex items-center">{currentPath === "/" && <Image src={BottomLine} width={100} height={6} alt="active" />}</div>
               </li>
-              <li className="hover:text-accent">
+
+              <li className={`flex w-[110] flex-col items-center ${currentPath === "/blog" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/blog">BLOG</Link>
+                <div className="flex items-center">{currentPath === "/blog" && <Image src={BottomLine} width={100} height={6} alt="active" />}</div>
               </li>
-              <li className="hover:text-accent">
+
+              <li className={`flex w-[110] flex-col ml-4 mr-8 items-center ${currentPath === "/booking" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/booking">BOOK TABLE</Link>
+                <div className=" flex items-center">{currentPath === "/booking" && <Image src={BottomLine} width={100} height={6} alt="active" />}</div>
               </li>
-              <li className="hover:text-accent">
+              <li className={`flex w-[110] flex-col  items-center ${currentPath === "/contact" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/contact">CONTACT US</Link>
+                <div className=" flex items-center">{currentPath === "/contact" && <Image src={BottomLine} width={100} height={6} alt="active" />}</div>
               </li>
             </ul>
           </nav>
