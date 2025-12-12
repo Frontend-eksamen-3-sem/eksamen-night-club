@@ -10,6 +10,7 @@ import RecentBlog from "./components/index/RecentBlog";
 // import EmailForm from "./components/index/EmailForm";
 import Button from "./components/Button";
 import Footer from "./components/Footer";
+import { Suspense } from "react";
 
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
@@ -24,7 +25,9 @@ export default function Home() {
 
       <main>
         <Welcome />
+        <Suspense fallback={<div className="p-4">Loading events…</div>}>
         <EventMonth />
+        </Suspense>
         <Gallery />
         <MusicCarousel />
         <VideoCarousel />
