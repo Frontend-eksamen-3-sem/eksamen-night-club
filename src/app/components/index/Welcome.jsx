@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Welcome = () => {
   return (
-    <section className="col-[full] grid grid-cols-subgrid">
+    <section className="col-[content] grid grid-cols-subgrid">
       <Title>WELCOME IN NIGHTCLUB</Title>
       <div className="col-[content] grid md:grid-cols-3 justify-items-center md:justify-items-stretch md:gap-4">
         <WelcomeImageText src={Pic1} alt="welcome picture 1" title="NIGHT CLUB" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non rutrum felis. Pell blandit neque. Cras venenatis orci ut massa efficitur, eget pretium nulla blandit. Quisque sodales suscipit convallis. Ut feugiat iaculis est, a feugiat erat." icon={<Image src={SpecialIcon} alt="icon" className="w-8 h-8" />} />
