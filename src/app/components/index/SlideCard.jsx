@@ -19,22 +19,22 @@ const SlideCard = ({ event }) => {
           <motion.div  
             className="col-start-1 row-start-1 w-0 h-0 
              border-l-60 border-l-accent border-b-60 border-b-transparent 
-             z-20 relative"
+             z-20 "
             initial={{ x: -80, y: -80, opacity: 0 }}
             animate={isActive ? { x: 0, y: 0, opacity: 1 } : { x: -80, y: -80, opacity: 0 }}
             transition={{ duration: 0.45, ease: "easeOut" }}
-          />
+          /> 
           <motion.div
             className="col-start-3 row-start-3 w-0 h-0 
              border-r-60 border-r-accent border-t-60 border-t-transparent 
-             justify-self-end self-end z-20 relative"
+             justify-self-end self-end z-20"
             initial={{ x: 80, y: 80, opacity: 0 }}
             animate={isActive ? { x: 0, y: 0, opacity: 1 } : { x: 80, y: 80, opacity: 0 }}
             transition={{ duration: 0.45, ease: "easeOut" }}
           />
 
           <motion.div className="row-start-3 col-end-4 col-start-1 bg-black p-4 z-0" initial={{ y: "100%" }} animate={{ y: isActive ? "0%" : "100%" }} transition={{ duration: 0.45, ease: "easeOut" }}>
-            <h3 className="text-lg font-semibold">{event.title}</h3>
+            <h2 className="text-lg font-semibold">{event.title}</h2>
             <p>{event.description?.slice(0, 200)}...</p>
           </motion.div>
         </motion.div>
