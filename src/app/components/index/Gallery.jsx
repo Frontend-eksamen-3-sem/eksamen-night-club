@@ -1,5 +1,4 @@
 import Title from "../Title";
-import Image from "next/image";
 import { Suspense } from "react";
 import GalleryClient from "./GalleryClient";
 

@@ -8,14 +8,7 @@ const GalleryComponent = ({ src, alt, onClick, initial, transition, className = 
 
   return (
     <>
-      <motion.div
-        onClick={onClick} //
-        initial={initial}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={transition}
-        className={`w-full relative h-full overflow-hidden cursor-pointer  ${className}`}
-      >
+      <motion.div onClick={onClick} initial={initial} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={transition} className={`w-full relative h-full overflow-hidden cursor-pointer  ${className}`}>
         <div className="grid grid-cols-3 grid-rows-3 w-full h-full " onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
           <motion.div
             className="col-start-1 row-start-1 self-start w-0 h-0
