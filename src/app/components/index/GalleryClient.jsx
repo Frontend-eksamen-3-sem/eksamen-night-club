@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Dialog, DialogTitle, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Button from "../Button";
+import GalleryComponent from "./GalleryComponent";
 
 export default function Gallery({ images }) {
   const [open, setOpen] = useState(false);
@@ -17,53 +17,32 @@ export default function Gallery({ images }) {
 
   return (
     <>
-      <div className="max-h-[60vh] grid grid-cols-1 sm:grid-cols-6 sm:grid-rows-2 w-full h-full">
-        <motion.div onClick={() => handleOpen(0)} initial={{ x: -140, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }} className="sm:col-start-1 sm:col-end-3 sm:row-span-1 cursor-pointer">
-          <Image src={images[0].asset.url} alt={images[0].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
-        <motion.div onClick={() => handleOpen(1)} initial={{ x: -60, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.55 }} className=" sm:col-start-3 sm:col-end-4 sm:row-span-1 cursor-pointer">
-          <Image src={images[1].asset.url} alt={images[1].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
-        <motion.div onClick={() => handleOpen(2)} initial={{ x: -120, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.65 }} className=" sm:col-start-4 sm:col-end-6 sm:row-span-1 cursor-pointer">
-          <Image src={images[2].asset.url} alt={images[2].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
-        <motion.div onClick={() => handleOpen(3)} initial={{ x: -40, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5 }} className=" sm:col-start-6 sm:col-end-7 sm:row-span-1 cursor-pointer">
-          <Image src={images[3].asset.url} alt={images[3].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
-        <motion.div onClick={() => handleOpen(4)} initial={{ x: -160, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.75 }} className=" sm:col-start-1 sm:col-end-3 sm:row-span-2 cursor-pointer">
-          <Image src={images[4].asset.url} alt={images[4].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
-        <motion.div onClick={() => handleOpen(5)} initial={{ x: -80, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className=" sm:col-start-3 sm:col-end-5 sm:row-span-2 cursor-pointer">
-          <Image src={images[5].asset.url} alt={images[5].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
-        <motion.div onClick={() => handleOpen(6)} initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }} className=" sm:col-start-5 sm:col-end-7 sm:row-span-2 cursor-pointer">
-          <Image src={images[6].asset.url} alt={images[6].description} className="w-full h-full object-cover" width={500} height={500} unoptimized />
-        </motion.div>
+      <div className="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 w-full h-full">
+        <GalleryComponent className="md:col-start-1 md:col-end-3 md:row-span-1" src={images[0].asset.url} alt={images[0].description} onClick={() => handleOpen(0)} initial={{ x: -140, opacity: 0 }} transition={{ duration: 0.7 }} />
+        <GalleryComponent className="md:col-start-3 md:col-end-4 md:row-span-1" src={images[1].asset.url} alt={images[1].description} onClick={() => handleOpen(1)} initial={{ x: -60, opacity: 0 }} transition={{ duration: 0.55 }} />
+        <GalleryComponent className="md:col-start-4 md:col-end-6 md:row-span-1" src={images[2].asset.url} alt={images[2].description} onClick={() => handleOpen(2)} initial={{ x: -120, opacity: 0 }} transition={{ duration: 0.65 }} />
+        <GalleryComponent className="md:col-start-6 md:col-end-7 md:row-span-1" src={images[3].asset.url} alt={images[3].description} onClick={() => handleOpen(3)} initial={{ x: -40, opacity: 0 }} transition={{ duration: 0.5 }} />
+        <GalleryComponent className="md:col-start-1 md:col-end-3 md:row-span-2" src={images[4].asset.url} alt={images[4].description} onClick={() => handleOpen(4)} initial={{ x: -160, opacity: 0 }} transition={{ duration: 0.75 }} />
+        <GalleryComponent className="md:col-start-3 md:col-end-5 md:row-span-2" src={images[5].asset.url} alt={images[5].description} onClick={() => handleOpen(5)} initial={{ x: -80, opacity: 0 }} transition={{ duration: 0.6 }} />
+        <GalleryComponent className="md:col-start-5 md:col-end-7 md:row-span-2" src={images[6].asset.url} alt={images[6].description} onClick={() => handleOpen(6)} initial={{ x: -100, opacity: 0 }} transition={{ duration: 0.7 }} />
       </div>
 
-      {/* -- Dialog / Lightbox viewer -- */}
-      <Dialog className="md:hidden" open={open} onOpenChange={setOpen}>
-        <DialogTitle>Gallery Image</DialogTitle>
-        <DialogContent className="bg-black border-black justify-center !max-w-[750] w-full max-h-[850] p-0">
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="bg-black border-black justify-center !max-w-[250] max-h-[500]  md:!max-w-[800] md:max-h-[750] p-0">
           <Carousel opts={{ startIndex: selectedIndex }}>
             <CarouselPrevious className="z-50 text-white" />
             <CarouselNext className="z-50 text-white" />
-
-            <CarouselContent className="max-w-[full] max-h-[700] border-none bg-black">
+            <CarouselContent className="max-w-[250] max-h-[500] md:max-w-[850] md:max-h-[750] border-none bg-black">
               {images.map((img) => (
                 <CarouselItem key={img.id}>
-                  <div className="overflow-auto">
-                    <Image src={img.asset?.url} alt={img.description} className="w-[800] h-[400] object-cover" width={500} height={500} unoptimized />
+                  <div className="overflow-auto grid border-b-2 border-accent">
+                    <div className="col-start-4 row-end-3 self-end w-0 h-0 border-r-accent border-r-50 border-t-50 border-t-transparent z-20 justify-self-end " />
+                    <Image src={img.asset?.url} alt={img.description} className="md:w-[800] md:h-[500] w-[300] h-[100] col-start-4 row-end-3  object-cover" height={100} width={100} unoptimized />
                   </div>
-
-                  {/* <div className="p-6 bg-black text-white">
-                    <h2 className="text-xl font-bold mb-2">{img.title ?? "Gallery Image"}</h2>
-                    <p className="text-sm opacity-80">{img.description}</p>
-                  </div> */}
-                  <div className=" grid">
+                  <div className="grid gap-4 px-2 py-2">
                     <h2>Night club party</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!</p>
-                    <Button className="mt-2  place-self-end-safe" onClick={() => setSelectedIdex(null)}>
+                    <Button className="mt-2 place-self-end-safe" onClick={() => setSelectedIdex(null)}>
                       Read more
                     </Button>
                   </div>

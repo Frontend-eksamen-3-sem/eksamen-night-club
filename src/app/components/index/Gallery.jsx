@@ -1,5 +1,4 @@
 import Title from "../Title";
-import Image from "next/image";
 import { Suspense } from "react";
 import GalleryClient from "./GalleryClient";
 
@@ -7,7 +6,6 @@ const Gallery = async () => {
   return (
     <div className="col-[full]">
       <Title>NIGHT CLUB GALLERY</Title>
-
       <Suspense fallback={<div className="p-4">Loading gallery…</div>}>
         <FetchGallery />
       </Suspense>
