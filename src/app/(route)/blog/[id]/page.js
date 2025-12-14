@@ -24,6 +24,7 @@ export default function BlogPosts({ params }) {
       <main className="">
         <Suspense fallback={<div className="p-4">Loading blog post…</div>}>
           <SingleBlogPost params={params} />
+          <CommentCard params={params} />
         </Suspense>
         <Blogform />
       </main>
