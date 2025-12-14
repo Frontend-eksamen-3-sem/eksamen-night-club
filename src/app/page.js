@@ -1,11 +1,11 @@
-// import IndexHero from "./components/index/IndexHero";
+import IndexHero from "./components/index/IndexHero";
+import Testimonials from "./components/index/Testimonials";
 import Header from "./components/Header";
 import Welcome from "./components/index/Welcome";
 import EventMonth from "./components/index/EventMonth";
 import Gallery from "./components/index/Gallery";
 import MusicCarousel from "./components/index/MusicCarousel";
 import VideoCarousel from "./components/index/VideoCarousel";
-// import Testimonials from "./components/index/Testimonials";
 import RecentBlog from "./components/index/RecentBlog";
 // import EmailForm from "./components/index/EmailForm";
 import Button from "./components/Button";
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <header className="grid grid-cols-subgrid col-[full] ">
-        {/* <IndexHero /> */}
+        <IndexHero />
         <Header />
       </header>
 
@@ -31,7 +31,14 @@ export default function Home() {
         <Gallery />
         <MusicCarousel />
         <VideoCarousel />
-        {/* <Testimonials /> */}
+        <Suspense fallback={<div className="p-4">Loading testimonials…</div>}>
+          <section className="grid col-[full] grid-cols-subgrid">
+            <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full object-cover z-0 opacity-10 h-120" />
+            <div className="col-[content] row-start-1">
+              <Testimonials />
+            </div>
+          </section>
+        </Suspense>
         <RecentBlog />
         {/* <EmailForm /> */}
       </main>
