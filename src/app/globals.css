@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-h5-audio-player/lib/styles.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -114,4 +115,53 @@ p {
 .react-datepicker__input-container {
   width: 100%;
   display: block;
+}
+
+/*styling af audioplayer */
+@layer components {
+  .rhap_container.rhap_play-status--paused,
+  .rhap_container.rhap_play-status--playing {
+    background-color: black !important;
+    padding: 10px 0px !important;
+  }
+
+  .rhap_button-clear {
+    color: var(--white) !important;
+  }
+
+  .rhap_button-clear:hover {
+    opacity: 0.8 !important;
+  }
+
+  .rhap_progress-bar {
+    background-color: var(--pink) !important;
+    height: 2px !important;
+  }
+
+  .rhap_progress-filled {
+    background-color: var(--pink) !important;
+  }
+
+  .rhap_progress-indicator {
+    background-color: white !important;
+    padding: 4px !important;
+  }
+
+  .rhap_volume-bar {
+    background-color: var(--pink) !important;
+    height: 2px !important;
+  }
+
+  .rhap_volume-indicator {
+    background: white !important;
+  }
+
+
+  .rhap_download-progress {
+    background-color: var(--pink) !important;
+  }
+
+  .rhap_time {
+    color: var(--white) !important;
+  }
 }

@@ -1,9 +1,10 @@
 "use client";
 import Title from "../Title";
 import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
+// import "react-h5-audio-player/lib/styles.css";
 import { useState } from "react";
-import TextComp from "@/app/(route)/blog/components/TextCom";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const artists = [
   {
@@ -41,52 +42,80 @@ const artists = [
     thumb: "/assets/content-img/track1.jpg",
     track: "/assets/media/euphoria.mp3",
   },
-  // {
-  //   id: 6,
-  //   name: "Echo Twin",
-  //   image: "/assets/content-img/track2.jpg",
-  //   thumb: "/assets/content-img/track2.jpg",
-  //   track: "/assets/media/fashion-red-tape.mp3",
-  // },
+  {
+    id: 6,
+    name: "Echo Twin",
+    image: "/assets/content-img/track2.jpg",
+    thumb: "/assets/content-img/track2.jpg",
+    track: "/assets/media/fashion-red-tape.mp3",
+  },
+  {
+    id: 7,
+    name: "Echo Twin",
+    image: "/assets/content-img/track2.jpg",
+    thumb: "/assets/content-img/track2.jpg",
+    track: "/assets/media/fashion-red-tape.mp3",
+  },
 ];
 
 const MusicCarousel = () => {
   const [currentArtist, setCurrentArtist] = useState(artists[0]);
+
   return (
     <>
       <Title>NIGHT CLUB TRACK</Title>
-      <section className="grid col-[content]">
-        <div
-          className="grid grid-cols-1 
-      grid-rows-[1fr_auto_auto] 
-      md:grid-cols-[auto_auto] 
-      gap-2 bg-black "
-        >
-          <div className="aspect-square  w-70 overflow-hidden ">
+
+      <section className="grid col-[content] gap-6 bg-black">
+        <div className="grid md:grid-cols-[auto_1fr] gap-6 items-center">
+          <div className="hidden md:block aspect-square w-70 overflow-hidden">
             <img src={currentArtist.image} alt={currentArtist.name} className="w-full h-full object-cover" />
           </div>
-          <div className="flex flex-col justify-center gap-2">
+          <div className="grid gap-3">
             <h2 className="text-white text-2xl font-medium">{currentArtist.name}</h2>
-            <div className="w-[600px] max-w-full">
+
+            <div className="md:w-[800px] max-w-full">
               <AudioPlayer src={currentArtist.track} autoPlayAfterSrcChange />
             </div>
           </div>
-          <div className="grid gap-4 row-start-2 col-start-1 col-end-3">
-            <div className="flex gap-2 ">
-              {artists.map((artist) => (
-                <button
-                  key={artist.id}
-                  onClick={() => setCurrentArtist(artist)}
-                  className={`w-50 h-50 overflow-hidden transition
-              ${artist.id === currentArtist.id ? "ring-2 ring-yellow-400" : "opacity-60 hover:opacity-100"}
-            `}
-                >
-                  <img src={artist.thumb} alt={artist.name} className="w-full h-full object-cover" />
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {artists.map((artist) => {
+              const isActive = artist.id === currentArtist.id;
+
+              return (
+                <CarouselItem
+                  key={artist.id}
+                  className="
+                  basis-full 
+                  sm:basis-1/2 
+                  md:basis-1/5
+                "
+                >
+                  <button onClick={() => setCurrentArtist(artist)} className="grid w-full aspect-square">
+                    <div className="grid row-start-1 col-start-1 w-full h-full overflow-hidden">
+                      <img src={artist.thumb} alt={artist.name} className="row-start-1 col-start-1 w-full h-full object-cover z-0" />
+                      <motion.div className="col-start-1 row-start-1 w-0 h-0 border-l-60 border-l-accent border-b-60 border-b-transparent z-20 " initial={{ x: -80, y: -80, opacity: 0 }} animate={isActive ? { x: 0, y: 0, opacity: 1 } : { x: -80, y: -80, opacity: 0 }} transition={{ duration: 0.45, ease: "easeOut" }} />
+                      <motion.div className="col-start-1 row-start-1 w-0 h-0 border-r-60 border-r-accent border-t-60 border-t-transparent justify-self-end self-end z-20" initial={{ x: 80, y: 80, opacity: 0 }} animate={isActive ? { x: 0, y: 0, opacity: 1 } : { x: 80, y: 80, opacity: 0 }} transition={{ duration: 0.45, ease: "easeOut" }} />
+                    </div>
+                  </button>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+
+          {artists.length > 5 && (
+            <>
+              <CarouselPrevious className="border-white! text-white!" />
+              <CarouselNext className="border-white! text-white!" />
+            </>
+          )}
+        </Carousel>
       </section>
     </>
   );

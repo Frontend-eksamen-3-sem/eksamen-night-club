@@ -26,7 +26,7 @@ export default function Home() {
       <main>
         <Welcome />
         <Suspense fallback={<div className="p-4">Loading events…</div>}>
-        <EventMonth />
+          <EventMonth />
         </Suspense>
         <Gallery />
         <MusicCarousel />
@@ -34,7 +34,6 @@ export default function Home() {
         {/* <Testimonials /> */}
         <RecentBlog />
         {/* <EmailForm /> */}
-        <Button>READ MORE</Button>
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
