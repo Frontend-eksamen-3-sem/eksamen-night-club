@@ -4,7 +4,7 @@ import AudioPlayer from "react-h5-audio-player";
 // import "react-h5-audio-player/lib/styles.css";
 import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
+import { motion } from "framer-motion";
 
 const artists = [
   {
@@ -78,7 +78,6 @@ const MusicCarousel = () => {
             </div>
           </div>
         </div>
-
         <Carousel
           opts={{
             align: "start",
@@ -86,25 +85,28 @@ const MusicCarousel = () => {
           className="w-full"
         >
           <CarouselContent>
-            {artists.map((artist) => (
-              <CarouselItem
-                key={artist.id}
-                className="
+            {artists.map((artist) => {
+              const isActive = artist.id === currentArtist.id;
+
+              return (
+                <CarouselItem
+                  key={artist.id}
+                  className="
                   basis-full 
                   sm:basis-1/2 
                   md:basis-1/5
                 "
-              >
-                <button
-                  onClick={() => setCurrentArtist(artist)}
-                  className={`w-full aspect-square overflow-hidden transition
-                    ${artist.id === currentArtist.id ? "ring-2 ring-yellow-400" : "opacity-60 hover:opacity-100"}
-                  `}
                 >
-                  <img src={artist.thumb} alt={artist.name} className="w-full h-full object-cover" />
-                </button>
-              </CarouselItem>
-            ))}
+                  <button onClick={() => setCurrentArtist(artist)} className="grid w-full aspect-square">
+                    <div className="grid row-start-1 col-start-1 w-full h-full overflow-hidden">
+                      <img src={artist.thumb} alt={artist.name} className="row-start-1 col-start-1 w-full h-full object-cover z-0" />
+                      <motion.div className="col-start-1 row-start-1 w-0 h-0 border-l-60 border-l-accent border-b-60 border-b-transparent z-20 " initial={{ x: -80, y: -80, opacity: 0 }} animate={isActive ? { x: 0, y: 0, opacity: 1 } : { x: -80, y: -80, opacity: 0 }} transition={{ duration: 0.45, ease: "easeOut" }} />
+                      <motion.div className="col-start-1 row-start-1 w-0 h-0 border-r-60 border-r-accent border-t-60 border-t-transparent justify-self-end self-end z-20" initial={{ x: 80, y: 80, opacity: 0 }} animate={isActive ? { x: 0, y: 0, opacity: 1 } : { x: 80, y: 80, opacity: 0 }} transition={{ duration: 0.45, ease: "easeOut" }} />
+                    </div>
+                  </button>
+                </CarouselItem>
+              );
+            })}
           </CarouselContent>
 
           {artists.length > 5 && (
