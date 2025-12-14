@@ -1,4 +1,4 @@
-// import IndexHero from "./components/index/IndexHero";
+import IndexHero from "./components/index/IndexHero";
 import Testimonials from "./components/index/Testimonials";
 import Header from "./components/Header";
 import Welcome from "./components/index/Welcome";
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <header className="grid grid-cols-subgrid col-[full] ">
-        {/* <IndexHero /> */}
+        <IndexHero />
         <Header />
       </header>
 
