@@ -1,23 +1,33 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { useEffect, useState } from "react";
 import Button from "@/app/components/Button";
+import { submitComment } from "../[id]/action/action";
 
 const Blogform = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
 
   console.log(errors);
+
+  const onSubmit = async (data) => {
+    const formData = new FormData();
+    // formData.append("blogpostId", params);
+    formData.append("name", data.name);
+    formData.append("comment", data.comment);
+
+    await submitComment(formData);
+  };
 
   return (
     <>
       <section className="grid col-[content] gap-10">
         <h2 className="uppercase">Leave a comment </h2>
-        <form onSubmit={handleSubmit((data) => console.log(data))} className="text-white grid">
+        <form onSubmit={handleSubmit(onSubmit)} className="text-text grid">
+          {isSubmitSuccessful && <div className="mt-4 rounded-md border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">Your comment has been sent successfully.</div>}
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
               <input {...register("name", { required: "This is requried" })} type="text" placeholder="Your Name" className="w-full p-2 border border-white rounded-none bg-transparent mb-2" />
@@ -32,8 +42,8 @@ const Blogform = () => {
             <textarea {...register("comment", { required: "This is requried" })} type="text" placeholder="Your Comment" className="w-full p-2 border border-white rounded-none bg-transparent mb-2" />
             <p>{errors.comment?.message}</p>
           </div>
-          <Button className="mt-4 place-self-end-safe" type="submit">
-            Submit
+          <Button type="submit" disabled={isSubmitting} className="mt-4 place-self-end-safe">
+            {isSubmitting ? "SENDING..." : "SEND"}
           </Button>
         </form>
       </section>
