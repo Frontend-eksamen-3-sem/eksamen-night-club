@@ -7,35 +7,44 @@ import SlideCard from "./SlideCard";
 const EventMonthClient = ({ events }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
-  if (events.length < 2) return <p>Indlæser slides...</p>;
-
   const slides = [
-    { left: events[0], right: events[1] },
-    { left: events[2], right: events[3] },
-    { left: events[4], right: events[5] },
+    [events[0], events[1]],
+    [events[2], events[3]],
+    [events[4], events[5]],
   ];
-
-  const current = slides[activeSlideIndex] || slides[0];
 
   return (
     <div>
       <Title>EVENTS THIS MONTH</Title>
       <AnimatePresence mode="wait">
-        <motion.div key={activeSlideIndex} initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.4 }} className="grid md:grid-cols-2 gap-2">
-          {current.left && <SlideCard event={current.left} />}
-          {current.right && <SlideCard event={current.right} />}
+        <motion.div key={activeSlideIndex} initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -40 }} transition={{ duration: 0.4 }} className="grid gap-2 md:grid-cols-2">
+          <div className="md:hidden">
+            <SlideCard event={events[activeSlideIndex]} />
+          </div>
+          <div className="hidden md:contents">{slides[activeSlideIndex]?.map((event, i) => event && <SlideCard key={i} event={event} />)}</div>
         </motion.div>
       </AnimatePresence>
 
-      <div className="flex justify-center mt-4 gap-3 py-5">
+      <div className="flex md:hidden justify-center gap-3 mt-4 py-5">
+        {events.map((_, i) => (
+          <a
+            key={i}
+            onClick={() => setActiveSlideIndex(i)}
+            className={` w-3 h-3  cursor-pointer transition-all
+       ${activeSlideIndex === i ? "bg-pink-500 scale-125" : "bg-white"}
+     `}
+          />
+        ))}
+      </div>
+
+      <div className="hidden md:flex justify-center gap-3 mt-4 py-5">
         {slides.map((_, i) => (
           <a
             key={i}
             onClick={() => setActiveSlideIndex(i)}
-            className={`
-              w-3 h-3  cursor-pointer transition-all
-              ${activeSlideIndex === i ? "bg-pink-500 scale-125" : "bg-white"}
-            `}
+            className={` w-3 h-3  cursor-pointer transition-all
+       ${activeSlideIndex === i ? "bg-pink-500 scale-125" : "bg-white"}
+     `}
           />
         ))}
       </div>
