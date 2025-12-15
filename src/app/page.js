@@ -30,8 +30,8 @@ export default function Home() {
         </Suspense>
         <Gallery />
         <MusicCarousel />
-        <VideoCarousel />
-        {/* <Testimonials /> */}
+        <VideoCarousel /> 
+        {/* <Testimonials /> */} 
         <RecentBlog />
         {/* <EmailForm /> */}
       </main>
