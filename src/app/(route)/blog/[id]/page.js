@@ -8,7 +8,8 @@ import Blogform from "../components/BlogForm";
 import CommentCard from "../components/CommentCard";
 import { Suspense } from "react";
 
-export default function BlogPosts({ params }) {
+export default async function BlogPosts({ params }) {
+  const { id } = await params;
   return (
     <>
       <header className="grid grid-cols-subgrid col-[full]">
@@ -26,7 +27,7 @@ export default function BlogPosts({ params }) {
           <SingleBlogPost params={params} />
           <CommentCard params={params} />
         </Suspense>
-        <Blogform />
+        <Blogform blogpostId={id} />
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
