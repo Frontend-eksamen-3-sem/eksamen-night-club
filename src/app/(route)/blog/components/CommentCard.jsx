@@ -14,7 +14,7 @@ const CommentCard = async ({ params }) => {
             <div className="flex gap-2 mb-4">
               <h3 className="font-bold !text-text">{comment.name}</h3>
               <p>-</p>
-              <h3>Posted {new Date(comment.date).toLocaleDateString()}</h3>
+              <h3>Posted {new Date(comment.date).toLocaleDateString("da-DK")}</h3>
             </div>
             <p>{comment.content}</p>
           </div>

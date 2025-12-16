@@ -21,7 +21,7 @@ const FetchBlog = async () => {
   const blog = await response.json();
   console.log(blog);
 
-  const posts = blog.slice(0, 3);
+  const posts = blog.slice(-3);
 
   return (
     <>

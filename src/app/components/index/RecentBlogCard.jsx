@@ -5,12 +5,11 @@ import Link from "next/link";
 const RecentBlogCard = ({ blog }) => {
   return (
     <>
-      <section className="col-[content]">
+      <section className="col-[content] mb-8">
         <div className="flex gap-8 flex-col md:flex-row justify-between">
           {blog.map((post) => {
-            // nyt
             const commentCount = post.comments?.length ?? 0;
-            // const date = new Date(post.date).toISOString();
+            const date = new Date(post.date).toLocaleDateString("da-DK");
 
             return (
               <Link href={`/blog/${post.id}`} className="text-accent hover:underline">
@@ -22,9 +21,9 @@ const RecentBlogCard = ({ blog }) => {
                     <span className="text-accent">/</span>
                     <h3>{commentCount} Comments</h3>
                     <span className="text-accent">/</span>
-                    <h3></h3>
+                    <h3>Posted {date}</h3>
                   </div>
-                  <p className="line-clamp-2">{post.content}</p>
+                  <p className="line-clamp-2 !mt-4">{post.content}</p>
                 </div>
               </Link>
             );
