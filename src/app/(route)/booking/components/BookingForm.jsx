@@ -51,7 +51,7 @@ const BookingForm = () => {
     <section className="grid col-[content]">
       <TableGrid onSelectTable={selectTable} selectedTable={tableNumber} />
       <h1 className="pb-6 pt-12">Book a Table</h1>
-      {statusMessage && <span className="mt-4 border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400 mb-4">{statusMessage}</span>}
+      {status === "success" && statusMessage && <span className="mt-4 border border-green-500/30 bg-green-500/10 text-green-400 px-2 py-3 text-md mb-4">{statusMessage}</span>}
       <form onSubmit={handleSubmit(onSubmit)} className="text-white">
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div>
