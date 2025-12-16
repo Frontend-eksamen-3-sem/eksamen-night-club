@@ -18,8 +18,10 @@ import Footerbg from "@/assets/bg/footerbg.jpg";
 export default function Home() {
   return (
     <>
-      <header className="grid grid-cols-subgrid col-[full] ">
+      <section className="grid col-[full] grid-cols-subgrid">
         <IndexHero />
+      </section>
+      <header className="grid grid-cols-subgrid col-[full] sticky top-0 z-50">
         <Header />
       </header>
 
