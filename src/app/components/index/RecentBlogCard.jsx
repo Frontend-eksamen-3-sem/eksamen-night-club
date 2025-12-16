@@ -5,8 +5,8 @@ import Link from "next/link";
 const RecentBlogCard = ({ blog }) => {
   return (
     <>
-      <section className="col-[content] mb-8">
-        <div className="flex gap-8 flex-col md:flex-row justify-between">
+      <section className="col-[content] mb-8 px-8 md:px-0 md:place-self-start">
+        <div className="flex gap-8 flex-col md:flex-row items-center justify-between">
           {blog.map((post) => {
             const commentCount = post.comments?.length ?? 0;
             const date = new Date(post.date).toLocaleDateString("da-DK");
