@@ -32,14 +32,14 @@ export default function Gallery({ images }) {
           <Carousel opts={{ startIndex: selectedIndex }}>
             <CarouselPrevious className="z-50 text-text" />
             <CarouselNext className="z-50 text-text" />
-            <CarouselContent className="max-w-[70vw] max-h-[65vh] md:max-w-[65vw] md:max-h-[95vh] border-none bg-black">
+            <CarouselContent className="max-w-[70vw] max-h-[65vh] md:max-w-[55vw] md:max-h-[95vh] border-none bg-black">
               {images.map((img) => (
                 <CarouselItem key={img.id}>
                   <div className="overflow-auto grid border-b-2 border-accent">
                     <div className="col-start-4 row-end-3 self-end w-0 h-0 border-r-accent border-r-50 border-t-50 border-t-transparent z-20 justify-self-end " />
                     <Image src={img.asset?.url} alt={img.description} className="md:w-[800] md:h-[500] w-[300] h-[100] col-start-4 row-end-3  object-cover" height={100} width={100} unoptimized />
                   </div>
-                  <div className="grid gap-4 px-2 py-2">
+                  <div className="grid gap-4 md:p-8">
                     <h2>Night club party</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!</p>
                     <Button className="mt-2 place-self-end-safe" onClick={() => setSelectedIdex(null)}>
