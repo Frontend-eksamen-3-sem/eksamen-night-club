@@ -51,6 +51,7 @@ const BookingForm = () => {
     <section className="grid col-[content]">
       <TableGrid onSelectTable={selectTable} selectedTable={tableNumber} />
       <h1 className="pb-6 pt-12">Book a Table</h1>
+      {statusMessage && <span className="mt-4 border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400 mb-4">{statusMessage}</span>}
       <form onSubmit={handleSubmit(onSubmit)} className="text-white">
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div>
@@ -130,7 +131,6 @@ const BookingForm = () => {
           <Button type="submit" className="ml-auto block mt-4 mb-4">
             RESERVE
           </Button>
-          {statusMessage && <span className={`mb-6 text-lg flex justify-end ${status === "error" ? "text-red-400" : "text-white"}`}>{statusMessage}</span>}
         </div>
       </form>
     </section>
