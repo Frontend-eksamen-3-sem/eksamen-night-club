@@ -35,7 +35,7 @@ const Blogform = ({ blogpostId }) => {
             </div>
             <div>
               <input {...register("email", { required: "This is requried", pattern: { value: /^\S+@\S+\.\S+$/i, message: "Invalid email address" } })} type="text" placeholder="Your Email" className="w-full p-2 border border-text rounded-none bg-transparent mb-2" />
-              {errors.email && <span className="text-sm text-red-400 mt-1">{errors.emil.message}</span>}
+              {errors.email && <span className="text-sm text-red-400 mt-1">{errors.email.message}</span>}
             </div>
           </div>
           <div className="grid">
