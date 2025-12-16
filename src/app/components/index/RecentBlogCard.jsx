@@ -12,10 +12,10 @@ const RecentBlogCard = ({ blog }) => {
             const date = new Date(post.date).toLocaleDateString("da-DK");
 
             return (
-              <Link href={`/blog/${post.id}`} className="text-accent hover:underline">
-                <div key={post.id} className="mb-8">
-                  <Image src={post.asset?.url} alt={post.title} width={400} height={400} className="object-cover" unoptimized />
-                  <h3 className="!text-text uppercase pb-2 pt-4">{post.title}</h3>
+              <Link key={post.id} href={`/blog/${post.id}`} className="text-accent hover:underline">
+                <div className="mb-8">
+                  <Image src={post.asset?.url} alt={post.title} width={400} height={400} className="object-cover h-auto w-auto" unoptimized />
+                  <h3 className="text-text! uppercase pb-2 pt-4">{post.title}</h3>
                   <div className="flex gap-2">
                     <h3>BY: {post.author}</h3>
                     <span className="text-accent">/</span>
@@ -23,7 +23,7 @@ const RecentBlogCard = ({ blog }) => {
                     <span className="text-accent">/</span>
                     <h3>Posted {date}</h3>
                   </div>
-                  <p className="line-clamp-2 !mt-4">{post.content}</p>
+                  <p className="line-clamp-2 mt-4!">{post.content}</p>
                 </div>
               </Link>
             );

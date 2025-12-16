@@ -5,7 +5,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import BottomLine from "@/assets/bottom_line2.png";
-import Logo from "@/assets/Logo.png";
+import Logo from "@/assets/icon/Logo_main.svg";
 import { IoMdClose } from "react-icons/io";
 
 const Header = () => {
@@ -14,15 +14,15 @@ const Header = () => {
   const currentPath = usePathname();
 
   return (
-    <section className="grid grid-cols-subgrid col-[full] border-t-2 border-b-2 border-accent font-semibold capitalize bg-black items-center text-text ">
+    <section className="grid grid-cols-subgrid col-[full] border-t-2 border-b-2 border-accent font-semibold capitalize bg-black items-center h-15 text-text ">
       <div className="col-start-1 row-start-1 self-start w-0 h-0 border-l-accent border-l-25 border-b-25 border-b-transparent md:border-l-30 md:border-b-30 " />
       <div className="col-start-4 row-end-2 self-end w-0 h-0 border-r-25 border-r-accent border-t-25 border-t-transparent justify-self-end md:border-r-30 md:border-t-30" />
 
-      <div className="grid col-[content] h-15">
+      <div className="grid col-[content]">
         <div className="flex justify-between items-center">
           <div>
             <Link href="/">
-              <Image src={Logo} alt="Logo" width={150} height={150} />
+              <Image src={Logo} alt="Logo" className="w-auto h-auto object-cover" width={100} height={100} unoptimized />
             </Link>
           </div>
 
@@ -38,21 +38,21 @@ const Header = () => {
             <ul className="flex gap-12 list-none justify-between">
               <li className={`flex flex-col items-center ${currentPath === "/" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/">HOME</Link>
-                <div className=" flex items-center">{currentPath === "/" && <Image src={BottomLine} width={50} height={6} alt="active" />}</div>
+                <div className=" flex items-center">{currentPath === "/" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
               </li>
 
               <li className={`flex flex-col items-center ${currentPath === "/blog" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/blog">BLOG</Link>
-                <div className="flex items-center">{currentPath === "/blog" && <Image src={BottomLine} width={50} height={6} alt="active" />}</div>
+                <div className="flex items-center">{currentPath === "/blog" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
               </li>
 
               <li className={`flex flex-col items-center ${currentPath === "/booking" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/booking">BOOK TABLE</Link>
-                <div className=" flex items-center">{currentPath === "/booking" && <Image src={BottomLine} width={50} height={6} alt="active" />}</div>
+                <div className=" flex items-center">{currentPath === "/booking" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
               </li>
               <li className={`flex flex-col items-center ${currentPath === "/contact" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/contact">CONTACT US</Link>
-                <div className=" flex items-center">{currentPath === "/contact" && <Image src={BottomLine} width={50} height={6} alt="active" />}</div>
+                <div className=" flex items-center">{currentPath === "/contact" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
               </li>
             </ul>
           </nav>

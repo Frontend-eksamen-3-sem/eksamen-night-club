@@ -13,7 +13,7 @@ const Footer = async () => {
       <section className="grid grid-cols-subgrid grid-rows-subgrid col-[content] bg-black my-10">
         <div className="grid z-10 gap-4 md:col-[content] content-center text-center md:text-left justify-items-center md:justify-items-stretch">
           <div className="grid md:col-1 md:row-start-1 md:row-end-5 md:mr-25 content-center gap-5 justify-items-center md:justify-items-start">
-            <Image src={Logo} alt="Logo" width={150} height={150} className="mb-4" />
+            <Image src={Logo} alt="Logo" width={150} height={150} className="mb-4 h-auto w-auto object-cover" />
             <div className="">
               <h3 className="uppercase">Location</h3>
               <p>
