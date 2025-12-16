@@ -15,7 +15,7 @@ export const submitContact = async (formData) => {
       date: new Date().toISOString(),
     }),
   });
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  
   console.log(response);
 
   return { success: response.ok };
