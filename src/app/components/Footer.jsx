@@ -5,6 +5,7 @@ import Logo from "@/assets/icon/Logo_main.svg";
 import { TiSocialFacebook } from "react-icons/ti";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BiLogoSnapchat } from "react-icons/bi";
+import Link from "next/link";
 
 const Footer = async () => {
   return (
@@ -24,7 +25,7 @@ const Footer = async () => {
             <div>
               <h3 className="uppercase">Opening Hours</h3>
               <p>
-                WED - THU 10:30 PMTO 3 AM <br /> SAT - SUN: 11 PM TO 5 AM
+                WED - THU 10:30 PM TO 3 AM <br /> SAT - SUN: 11 PM TO 5 AM
               </p>
             </div>
           </div>
@@ -49,7 +50,7 @@ const Footer = async () => {
           </div>
           <section className="md:col-span-3 mt-4">
             <div className="flex flex-col gap-4 md:flex-row items-center md:w-full content-center text-center md:text-left">
-              <p className="flex-1 text-center md:text-right">Copyright © NightClub</p>
+              <p className="flex-1 text-center md:text-left">Night Club PSD Template - All Rights Reserved</p>
 
               <div className="text-center">
                 <p>Stay Connected With Us</p>
@@ -65,7 +66,7 @@ const Footer = async () => {
                   </a>
                 </div>
               </div>
-              <p className="flex-1 text-right">Copyright © NightClub</p>
+              <p className="flex-1 text-right ">Copyright © NightClub</p>
             </div>
           </section>
         </div>
@@ -88,13 +89,15 @@ const FetchFooter = async () => {
       <h3 className="text-accent">RECENT POSTS</h3>
 
       {recent.map((post) => (
-        <div key={post.id} className="flex gap-4">
-          <Image src={post.asset?.url} alt={post.title} width={50} height={50} unoptimized className="w-20 h-20 object-cover" />
-          <div>
-            <p>{post.content?.slice(0, 100)}…</p>
-            <h4>Dato {post.date}</h4>
+        <Link href={`/blog/${post.id}`} key={post.id}>
+          <div className="flex gap-4">
+            <Image src={post.asset?.url} alt={post.title} width={50} height={50} unoptimized className="w-20 h-20 object-cover" />
+            <div>
+              <p>{post.content?.slice(0, 100)}…</p>
+              <h4>April 17 2018 {post.date}</h4> {/* dato findes ikke i api*/}
+            </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
