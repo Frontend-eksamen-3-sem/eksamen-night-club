@@ -1,20 +1,22 @@
 import Title from "../Title";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const videos = [
+const video = [
   {
     id: 1,
-    video: "/assets/media/video-crowd.mp4",
+    video: "/assets/media/video-dj-crowd1.mp4",
   },
   {
     id: 2,
-    video: "/assets/media/video-dj-crowd1.mp4",
+    video: "/assets/media/video-crowd.mp4",
   },
   {
     id: 3,
     video: "/assets/media/video-dj-crowd-2.mp4",
   },
 ];
+
+const videos = video.slice(-2);
 
 const VideoCarousel = () => {
   return (
