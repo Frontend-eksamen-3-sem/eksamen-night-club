@@ -1,7 +1,7 @@
 "use server";
 
 export const submitComment = async (formData) => {
-  //   const params = Number(formData.get("params"));
+  const blogpostId = formData.get("blogpostId");
   const name = formData.get("name");
   const comment = formData.get("comment");
 
@@ -9,14 +9,13 @@ export const submitComment = async (formData) => {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      //   blogpostId: params,
+      blogpostId: blogpostId,
       name: name,
       content: comment,
       date: new Date().toISOString(),
     }),
   });
 
-  //   await new Promise((resolve) => setTimeout(resolve, 2000));
   console.log(response);
 
   return { success: response.ok };
