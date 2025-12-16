@@ -31,7 +31,7 @@ const EventMonthClient = ({ events }) => {
             key={i}
             onClick={() => setActiveSlideIndex(i)}
             className={` w-3 h-3  cursor-pointer transition-all
-       ${activeSlideIndex === i ? "bg-pink-500 scale-125" : "bg-white"}
+       ${activeSlideIndex === i ? "bg-accent scale-125" : "bg-white"}
      `}
           />
         ))}
@@ -43,7 +43,7 @@ const EventMonthClient = ({ events }) => {
             key={i}
             onClick={() => setActiveSlideIndex(i)}
             className={` w-3 h-3  cursor-pointer transition-all
-       ${activeSlideIndex === i ? "bg-pink-500 scale-125" : "bg-white"}
+       ${activeSlideIndex === i ? "bg-accent scale-125" : "bg-white"}
      `}
           />
         ))}

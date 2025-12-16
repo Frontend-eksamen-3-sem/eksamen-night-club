@@ -28,9 +28,9 @@ const FetchBlogCard = async ({ page = 1 }) => {
 
   const currentPosts = posts.slice(start, end);
   const totalPages = Math.ceil(posts.length / limit);
-
+  
   return (
-    <div className="grid gap-12 col-[full]">
+    <div className="grid  col-[full]">
       {currentPosts.map((post, index) => {
         const isEven = index % 2 === 1;
 
@@ -38,7 +38,7 @@ const FetchBlogCard = async ({ page = 1 }) => {
           <div
             key={post.id}
             className="
-              grid gap-12 
+              grid 
               md:grid-cols-2
             "
           >
