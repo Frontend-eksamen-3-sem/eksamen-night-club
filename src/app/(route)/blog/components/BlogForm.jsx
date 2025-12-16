@@ -30,7 +30,7 @@ const Blogform = ({ blogpostId }) => {
           {isSubmitSuccessful && <div className="mt-4 rounded-md border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">Your comment has been sent successfully.</div>}
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
-              <input {...register("name", { required: "Name is required", minLength: { value: 2, message: "Name must be at least 2 characters" }, maxLength: { value: 50, message: "Name must not exceed 50 characters" }, pattern: { value: /^[a-zA-Z\s]+$/, message: "Name can only contain letters and spaces" } })} type="text" placeholder="Your Name" className="w-full p-2 border border-white rounded-none bg-transparent mb-2" />
+              <input {...register("name", { required: "Name is required", minLength: { value: 2, message: "Name must be at least 2 characters" }, maxLength: { value: 50, message: "Name must not exceed 50 characters" }, pattern: { value: /^[a-zA-Z\s]+$/, message: "Name can only contain letters and spaces" } })} type="text" placeholder="Your Name" className="w-full p-2 border border-text rounded-none bg-transparent mb-2" />
               <p>{errors.name?.message}</p>
             </div>
             <div>
@@ -39,7 +39,7 @@ const Blogform = ({ blogpostId }) => {
             </div>
           </div>
           <div className="grid">
-            <textarea {...register("comment", { required: "This is requried" })} type="text" placeholder="Your Comment" className="w-full p-2 border border-white rounded-none bg-transparent mb-2" />
+            <textarea {...register("comment", { required: "This is requried" })} type="text" placeholder="Your Comment" className="w-full p-2 border border-text rounded-none bg-transparent mb-2" />
             <p>{errors.comment?.message}</p>
           </div>
           <Button type="submit" disabled={isSubmitting} className="mt-4 place-self-end-safe">
