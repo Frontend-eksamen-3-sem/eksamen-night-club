@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <div>
             <Link href="/">
-              <Image src={Logo} alt="Logo" className="w-auto h-auto object-cover" width={100} height={100} unoptimized />
+              <Image src={Logo} alt="Logo" className="w-auto h-auto object-cover" width={100} height={100} loading="eager" unoptimized />
             </Link>
           </div>
 
