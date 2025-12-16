@@ -22,7 +22,7 @@ const ContactForm = () => {
   return (
     <section className="grid col-[content] py-10 justify-center">
       <form onSubmit={handleSubmit(onSubmit)} className="text-white grid gap-4 w-100">
-        {isSubmitSuccessful && <div className="mt-4 border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">Your comment has been sent successfully.</div>}
+        {isSubmitSuccessful && <div className="border border-green-500/30 bg-green-500/10 text-green-400 px-2 py-3 text-md">Your comment has been sent successfully.</div>}
         <div>
           <input
             type="text"
