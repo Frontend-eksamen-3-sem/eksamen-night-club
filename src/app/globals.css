@@ -39,15 +39,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns:
-    [full-start] 1fr [content-start] minmax(0, 600px)
-    [middel] minmax(0, 600px) [content-end] 1fr [full-end];
+    [full-start] 1fr
+    [content-start] minmax(0, 100%)
+    [content-end] 1fr
+    [full-end];
   grid-template-rows: auto 1fr auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    grid-template-columns:
+      [full-start] 1fr
+      [content-start] minmax(0, 600px)
+      [middel] minmax(0, 600px)
+      [content-end] 1fr
+      [full-end];
+  }
 }
 
 main {
   grid-column: full;
   display: grid;
-  grid-template-columns: inherit;
+  grid-template-columns: subgrid;
   background-color: var(--background);
   font-family: var(--font-family);
 }
