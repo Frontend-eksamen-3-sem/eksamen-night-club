@@ -7,7 +7,7 @@ const CommentCard = async ({ params }) => {
 
   return (
     <>
-      <section className="col-[content] mb-2 mt-12 px-4 md:px-0">
+      <section className="col-[content] mb-2 mt-12">
         <h2 className="uppercase">Comments</h2>
         {comments.map((comment) => (
           <div key={comment.id} className="mb-8 mt-4">
