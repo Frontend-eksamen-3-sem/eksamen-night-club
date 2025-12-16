@@ -7,6 +7,7 @@ import Gallery from "./components/index/Gallery";
 import MusicCarousel from "./components/index/MusicCarousel";
 import VideoCarousel from "./components/index/VideoCarousel";
 import RecentBlog from "./components/index/RecentBlog";
+import EmailForm from "./components/index/EmailForm";
 // import EmailForm from "./components/index/EmailForm";
 import Button from "./components/Button";
 import Footer from "./components/Footer";
@@ -42,7 +43,7 @@ export default function Home() {
           </section>
         </Suspense>
         <RecentBlog />
-        {/* <EmailForm /> */}
+        <EmailForm />
       </main>
 
       <footer className="grid col-[full] grid-cols-subgrid">
