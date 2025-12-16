@@ -117,9 +117,36 @@ const MusicCarousel = () => {
           </CarouselContent>
 
           {artists.length > 5 && (
-            <div className="mt-4 flex justify-center gap-4">
-              <CarouselPrevious className="z-50 static translate-y-0! text-text hover:text-accent" />
-              <CarouselNext className="z-50 static translate-y-0! text-text hover:text-accent" />
+            <div className="flex gap-2 md:grid-cols-2 justify-center! md:block">
+              <CarouselPrevious
+                className=" 
+        static!
+        transform-none!
+        translate-y-0!
+        top-auto!
+        left-auto!
+        md:absolute!
+        md:top-1/2!
+        md:-left-12!
+        md:-translate-y-1/2!
+        border-white! text-white! 
+      "
+              />
+
+              <CarouselNext
+                className="
+        static! 
+        transform-none!
+        translate-y-0!
+        top-auto!
+        left-auto!
+        md:absolute!
+        md:top-1/2!
+        md:-right-12!
+        md:-translate-y-1/2!
+        border-white! text-white!
+      "
+              />
             </div>
           )}
         </Carousel>
