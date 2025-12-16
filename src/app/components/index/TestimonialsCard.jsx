@@ -10,13 +10,13 @@ const TestimonialsCard = ({ name, content, asset, facebook, twitter }) => (
     <h2 className="pt-2">{name}</h2>
     <p className="text-center pt-4 pb-6">{content}</p>
     <div className="flex gap-2 justify-center">
-      <a href={facebook} target="_blank" rel="noopener noreferrer" className="border border-white w-10 h-10 flex items-center justify-center">
+      <a href={facebook} target="_blank" rel="noopener noreferrer" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
         <TiSocialFacebook color="white" />
       </a>
-      <a href={twitter} target="_blank" rel="noopener noreferrer" className="border border-white w-10 h-10 flex items-center justify-center">
+      <a href={twitter} target="_blank" rel="noopener noreferrer" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
         <FaTwitter color="white" />
       </a>
-      <a href="/" className="border border-white w-10 h-10 flex items-center justify-center">
+      <a href="" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
         <BiLogoSnapchat color="white" />
       </a>
     </div>

@@ -1,5 +1,4 @@
 import TestimonialsClient from "./TestimonialsClient";
-import Title from "../Title";
 
 export default async function Testimonials() {
   const response = await fetch("http://localhost:4000/testimonials");
