@@ -26,7 +26,7 @@ const EmailForm = () => {
             Subscribe to our newsletter and never miss an <span className="text-accent!"> Event</span>
           </p>
         </div>
-        <div className="flex gap-5 w-150">
+        <div className="flex gap-5 md:w-150">
           <input
             type="email"
             placeholder="Enter Your Email"
