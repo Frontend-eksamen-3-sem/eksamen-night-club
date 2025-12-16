@@ -25,7 +25,7 @@ const Footer = async () => {
             <div>
               <h3 className="uppercase">Opening Hours</h3>
               <p>
-                WED - THU 10:30 PM TO 3 AM <br /> SAT - SUN: 11 PM TO 5 AM
+                WED - THU: 10:30 PM TO 3 AM <br /> SAT - SUN: 11 PM TO 5 AM
               </p>
             </div>
           </div>
@@ -55,13 +55,13 @@ const Footer = async () => {
               <div className="text-center">
                 <p>Stay Connected With Us</p>
                 <div className="flex gap-2 justify-center">
-                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center">
+                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
                     <TiSocialFacebook color="white" />
                   </a>
-                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center">
+                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
                     <BiLogoSnapchat color="white" />
                   </a>
-                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center">
+                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
                     <AiOutlineInstagram color="white" />
                   </a>
                 </div>
