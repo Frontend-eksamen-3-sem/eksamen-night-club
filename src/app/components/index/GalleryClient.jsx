@@ -17,7 +17,7 @@ export default function Gallery({ images }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 w-full h-full">
+      <div className="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 w-full ">
         <GalleryComponent className="md:col-start-1 md:col-end-3 md:row-span-1" src={images[0].asset.url} alt={images[0].description} onClick={() => handleOpen(0)} initial={{ x: -140, opacity: 0 }} transition={{ duration: 0.7 }} />
         <GalleryComponent className="md:col-start-3 md:col-end-4 md:row-span-1" src={images[1].asset.url} alt={images[1].description} onClick={() => handleOpen(1)} initial={{ x: -60, opacity: 0 }} transition={{ duration: 0.55 }} />
         <GalleryComponent className="md:col-start-4 md:col-end-6 md:row-span-1" src={images[2].asset.url} alt={images[2].description} onClick={() => handleOpen(2)} initial={{ x: -120, opacity: 0 }} transition={{ duration: 0.65 }} />
@@ -28,11 +28,11 @@ export default function Gallery({ images }) {
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="bg-black border-black justify-center !max-w-[250] max-h-[500]  md:!max-w-[800] md:max-h-[750] p-0">
+        <DialogContent className="bg-black border-black justify-center !max-w-[70vw] max-h-[65vh]  md:!max-w-[55vw] md:max-h-[95vh] p-0">
           <Carousel opts={{ startIndex: selectedIndex }}>
-            <CarouselPrevious className="z-50 text-white" />
-            <CarouselNext className="z-50 text-white" />
-            <CarouselContent className="max-w-[250] max-h-[500] md:max-w-[850] md:max-h-[750] border-none bg-black">
+            <CarouselPrevious className="z-50 text-text" />
+            <CarouselNext className="z-50 text-text" />
+            <CarouselContent className="max-w-[70vw] max-h-[65vh] md:max-w-[65vw] md:max-h-[95vh] border-none bg-black">
               {images.map((img) => (
                 <CarouselItem key={img.id}>
                   <div className="overflow-auto grid border-b-2 border-accent">
