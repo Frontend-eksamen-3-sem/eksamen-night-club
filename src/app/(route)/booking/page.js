@@ -1,9 +1,10 @@
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
-import BookingClient from "./components/BookingClient";
+import BookingForm from "./components/BookingForm";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 import Footerbg from "@/assets/bg/footerbg.jpg";
+import { Suspense } from "react";
 
 export default function Booking() {
   return (
@@ -18,7 +19,9 @@ export default function Booking() {
         </section>
       </header>
       <main>
-        <BookingClient />
+        <Suspense fallback={<div>Loading booking form...</div>}>
+          <BookingForm />
+        </Suspense>
       </main>
       <footer className="grid col-[full] grid-cols-subgrid">
         <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />

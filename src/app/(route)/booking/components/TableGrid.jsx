@@ -5,7 +5,7 @@ import TableCard from "./TableCard";
 
 const TableGrid = ({ onSelectTable, selectedTable }) => {
   return (
-    <div className="grid grid-cols-5 gap-4 p-4">
+    <div className="grid md:grid-cols-5 md:gap-4 p-4 jusitfy-items-center">
       <TableCard src={Table4} number={1} onSelect={onSelectTable} isSelected={selectedTable === 1} />
       <TableCard src={Table4} number={2} onSelect={onSelectTable} isSelected={selectedTable === 2} />
       <TableCard src={Table6} number={3} onSelect={onSelectTable} isSelected={selectedTable === 3} />
