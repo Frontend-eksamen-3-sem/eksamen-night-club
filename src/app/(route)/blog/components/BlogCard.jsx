@@ -30,7 +30,7 @@ const FetchBlogCard = async ({ page = 1 }) => {
   const totalPages = Math.ceil(posts.length / limit);
   
   return (
-    <div className="grid  col-[full]">
+    <div className="grid col-[full]">
       {currentPosts.map((post, index) => {
         const isEven = index % 2 === 1;
 
@@ -62,13 +62,13 @@ const FetchBlogCard = async ({ page = 1 }) => {
                 px-4 md:px-0 
               `}
             >
-              <div className="max-w-[500px] w-full mx-auto px-4">
+              <div className="max-w-[500px] w-full mx-auto px-4 py-4">
                 <TextComp title={post.title} subtitle={post.author}>
                   {post.content?.slice(0, 500)}...
                 </TextComp>
               </div>
 
-              <div className="flex justify-end max-w-[600px] w-full  px-4">
+              <div className="flex justify-end max-w-[600px] w-full  px-4 pb-4">
                 <Link href={`/blog/${post.id}`}>
                   <Button>Read more</Button>
                 </Link>

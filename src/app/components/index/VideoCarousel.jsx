@@ -28,7 +28,7 @@ const VideoCarousel = () => {
             opts={{
               align: "start",
             }}
-            className="w-[70vw] relative"
+            className="w-[70vw] basis-full "
           >
             <CarouselContent>
               {videos.map((video) => (
@@ -38,8 +38,8 @@ const VideoCarousel = () => {
               ))}
             </CarouselContent>
             <div className="mt-4 flex justify-center gap-4">
-              <CarouselPrevious className="static !translate-y-0 !text-text" />
-              <CarouselNext className="static !translate-y-0 !text-text" />
+              <CarouselPrevious className="z-50 static translate-y-0! text-text hover:text-accent" />
+              <CarouselNext className="z-50 static translate-y-0! text-text hover:text-accent" />
             </div>
           </Carousel>
         </div>

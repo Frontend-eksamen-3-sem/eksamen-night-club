@@ -1,7 +1,4 @@
 "use client";
-
-"use client";
-
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useRouter } from "next/navigation";
@@ -9,7 +6,7 @@ import { useRouter } from "next/navigation";
 const PaginationClient = ({ page, totalPages }) => {
   const router = useRouter();
 
-  const handleChange = (event, newPage) => {
+  const handleChange = (newPage) => {
     router.push(`?page=${newPage}`);
   };
 

@@ -24,7 +24,7 @@ export default function Comment() {
 
       <footer className="grid col-[full] grid-cols-subgrid">
         <Image src={Footerbg} alt="Footerbg" className="col-span-full row-span-full w-full h-full object-cover z-0 opacity-10 " />
-        <div className="grid col-[content] row-start-1">
+        <div className="grid col-[content] row-start-1 justify-center">
           <Footer />
         </div>
       </footer>

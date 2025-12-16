@@ -117,7 +117,7 @@ const MusicCarousel = () => {
           </CarouselContent>
 
           {artists.length > 5 && (
-            <div className="grid grid-cols-2 justify-items-center md:block">
+            <div className="flex gap-2 md:grid-cols-2 justify-center! md:block">
               <CarouselPrevious
                 className=" 
         static!
@@ -142,7 +142,7 @@ const MusicCarousel = () => {
         left-auto!
         md:absolute!
         md:top-1/2!
-        md:-left-12!
+        md:-right-12!
         md:-translate-y-1/2!
         border-white! text-white!
       "

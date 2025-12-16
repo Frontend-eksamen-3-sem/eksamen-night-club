@@ -28,10 +28,10 @@ export default function Gallery({ images }) {
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="bg-black border-black justify-center !max-w-[70vw] max-h-[65vh]  md:!max-w-[55vw] md:max-h-[95vh] p-0">
+        <DialogContent className="bg-black border-black justify-center max-w-[70vw]! max-h-[65vh]  md:max-w-[55vw]! md:max-h-[95vh] p-0" aria-describedby="gallery-description">
           <Carousel opts={{ startIndex: selectedIndex }}>
-            <CarouselPrevious className="z-50 text-text" />
-            <CarouselNext className="z-50 text-text" />
+            <CarouselPrevious className="z-50 text-text hover:text-accent" />
+            <CarouselNext className="z-50 text-text hover:text-accent" />
             <CarouselContent className="max-w-[70vw] max-h-[65vh] md:max-w-[55vw] md:max-h-[95vh] border-none bg-black">
               {images.map((img) => (
                 <CarouselItem key={img.id}>
