@@ -1,35 +1,58 @@
 "use client";
-import React, { useEffect } from "react";
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Button from "../../../components/Button";
+import TableGrid from "./TableGrid";
+import { checkAndBookTable } from "./BookingServer";
 
-const BookingForm = ({ selectedTableNumber }) => {
+const BookingForm = () => {
+  const [status, setStatus] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
   const {
     register,
     control,
     handleSubmit,
     formState: { errors },
     setValue,
-  } = useForm({ mode: "onChange" });
+    setError,
+    reset,
+    watch,
+  } = useForm({
+    mode: "onChange",
+    defaultValues: { tableNumber: "" },
+  });
 
-  useEffect(() => {
-    if (selectedTableNumber) {
-      setValue("tableNumber", selectedTableNumber);
+  const tableNumber = watch("tableNumber");
+
+  const selectTable = (num) => setValue("tableNumber", num);
+
+  const onSubmit = async (data) => {
+    const result = await checkAndBookTable(data);
+    console.log("API reservations", result.reservations);
+
+    if (!result.success) {
+      setError("tableNumber", { message: result.message });
+      setError("date", { message: result.message });
+      setStatus("error");
+      setStatusMessage(result.message);
+      return;
     }
-  }, [selectedTableNumber, setValue]);
 
-  const onSubmit = (data) => {
+    setStatus("success");
+    setStatusMessage("Table booked successfully!");
+    reset();
+
     console.log(data);
   };
 
   return (
-    <section>
+    <section className="grid col-[content]">
+      <TableGrid onSelectTable={selectTable} selectedTable={tableNumber} />
       <h1 className="pb-6 pt-12">Book a Table</h1>
-
       <form onSubmit={handleSubmit(onSubmit)} className="text-white">
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid md:grid-cols-2 gap-4 mb-4">
           <div>
             <input
               type="text"
@@ -63,7 +86,6 @@ const BookingForm = ({ selectedTableNumber }) => {
               readOnly
               {...register("tableNumber", {
                 required: "Table number is required, pick a table from above",
-                valueAsNumber: true,
                 min: { value: 1, message: "Table number must be at least 1" },
                 max: { value: 15, message: "Table number must not exceed 15" },
               })}
@@ -77,7 +99,7 @@ const BookingForm = ({ selectedTableNumber }) => {
               placeholder="Number of Guests"
               {...register("guests", {
                 required: "Number of guests is required",
-                valueAsNumber: true,
+
                 min: { value: 1, message: "Please choose a number between 1-8 guests" },
                 max: { value: 8, message: "Please choose a number between 1-8 guests" },
               })}
@@ -103,11 +125,12 @@ const BookingForm = ({ selectedTableNumber }) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           <textarea placeholder="Your Comment" {...register("comment")} className="p-2 border border-white rounded-none bg-transparent" />
-          <Button type="submit" className="ml-auto block">
+          <Button type="submit" className="ml-auto block mt-4 mb-4">
             RESERVE
           </Button>
+          {statusMessage && <span className={`mb-6 text-lg flex justify-end ${status === "error" ? "text-red-400" : "text-white"}`}>{statusMessage}</span>}
         </div>
       </form>
     </section>
