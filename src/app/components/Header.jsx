@@ -38,21 +38,21 @@ const Header = () => {
             <ul className="flex gap-12 list-none justify-between">
               <li className={`flex flex-col items-center ${currentPath === "/" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/">HOME</Link>
-                <div className=" flex items-center">{currentPath === "/" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
+                <div className=" flex items-center">{currentPath === "/" && <Image src={BottomLine} width={50} height={6} alt="active" unoptimized />}</div>
               </li>
 
               <li className={`flex flex-col items-center ${currentPath === "/blog" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/blog">BLOG</Link>
-                <div className="flex items-center">{currentPath === "/blog" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
+                <div className="flex items-center">{currentPath === "/blog" && <Image src={BottomLine} width={50} height={6} alt="active" unoptimized />}</div>
               </li>
 
               <li className={`flex flex-col items-center ${currentPath === "/booking" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/booking">BOOK TABLE</Link>
-                <div className=" flex items-center">{currentPath === "/booking" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
+                <div className=" flex items-center">{currentPath === "/booking" && <Image src={BottomLine} width={50} height={6} alt="active" unoptimized />}</div>
               </li>
               <li className={`flex flex-col items-center ${currentPath === "/contact" ? "text-accent" : "hover:text-accent"}`}>
                 <Link href="/contact">CONTACT US</Link>
-                <div className=" flex items-center">{currentPath === "/contact" && <Image src={BottomLine} width={50} height={6} className="object-cover h-auto w-auto" alt="active" unoptimized />}</div>
+                <div className=" flex items-center">{currentPath === "/contact" && <Image src={BottomLine} width={50} height={6} alt="active" unoptimized />}</div>
               </li>
             </ul>
           </nav>
