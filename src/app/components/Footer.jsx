@@ -55,14 +55,14 @@ const Footer = async () => {
               <div className="text-center">
                 <p>Stay Connected With Us</p>
                 <div className="flex gap-2 justify-center">
-                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
-                    <TiSocialFacebook color="white" />
+                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:border-accent group">
+                    <TiSocialFacebook className=" text-white group-hover:text-accent transition-color" />
                   </a>
-                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
-                    <BiLogoSnapchat color="white" />
+                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:border-accent group">
+                    <BiLogoSnapchat className=" text-white group-hover:text-accent transition-color" />
                   </a>
-                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:opacity-90">
-                    <AiOutlineInstagram color="white" />
+                  <a href="/" className="border border-white w-10 h-10 flex items-center justify-center hover:border-accent group">
+                    <AiOutlineInstagram className=" text-white group-hover:text-accent transition-color" />
                   </a>
                 </div>
               </div>
