@@ -2,7 +2,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function IndexHeroClient({ randomImg, logoImg, BottomLine }) {
+export default function IndexHeroClient({ images, logoImg, BottomLine }) {
+  const randomImg = images[Math.floor(Math.random() * images.length)];
+
   return (
     <section className="col-[full]">
       <div className="grid grid-cols-3">
