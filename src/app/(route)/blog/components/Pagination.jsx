@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 const PaginationClient = ({ page, totalPages }) => {
   const router = useRouter();
 
-  const handleChange = (newPage) => {
+  const handleChange = (event, newPage) => {
     router.push(`?page=${newPage}`);
   };
 
