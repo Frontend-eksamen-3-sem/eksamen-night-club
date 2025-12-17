@@ -20,7 +20,7 @@ export default BlogCard;
 
 const FetchBlogCard = async ({ page = 1 }) => {
   const limit = 3;
-  const response = await fetch("http://localhost:4000/blogposts");
+  const response = await fetch(`http://localhost:4000/blogposts/?embed=comments`, { cache: "no-store" });
   const posts = await response.json();
 
   const start = (page - 1) * limit;
@@ -28,11 +28,14 @@ const FetchBlogCard = async ({ page = 1 }) => {
 
   const currentPosts = posts.slice(start, end);
   const totalPages = Math.ceil(posts.length / limit);
-  
+
+  const date = new Date().toLocaleDateString("da-DK");
+
   return (
     <div className="grid col-[full]">
       {currentPosts.map((post, index) => {
         const isEven = index % 2 === 1;
+        const commentCount = post.comments?.length ?? 0;
 
         return (
           <div
@@ -63,7 +66,7 @@ const FetchBlogCard = async ({ page = 1 }) => {
               `}
             >
               <div className="max-w-[500px] w-full mx-auto px-4 py-4">
-                <TextComp title={post.title} subtitle={post.author}>
+                <TextComp title={post.title} subtitle={post.author} commentCount={commentCount} posted={date}>
                   {post.content?.slice(0, 500)}...
                 </TextComp>
               </div>
