@@ -75,7 +75,7 @@ const MusicCarousel = () => {
             <h2 className="text-white text-2xl font-medium">{currentArtist.name}</h2>
 
             <div className="md:w-[800px] max-w-full">
-              <AudioPlayer src={currentArtist.track} autoPlayAfterSrcChange />
+              <AudioPlayer src={currentArtist.track} autoPlayAfterSrcChange defaultDuration="--:--" />
             </div>
           </div>
         </div>
