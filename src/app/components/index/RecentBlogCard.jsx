@@ -9,8 +9,6 @@ const RecentBlogCard = ({ blog }) => {
         <div className="flex gap-8 flex-col md:flex-row items-center justify-between">
           {blog.map((post) => {
             const commentCount = post.comments?.length ?? 0;
-            const date = new Date(post.date).toLocaleDateString("da-DK");
-
             return (
               <Link key={post.id} href={`/blog/${post.id}`} className="text-accent hover:underline">
                 <div className="mb-8">
@@ -21,7 +19,7 @@ const RecentBlogCard = ({ blog }) => {
                     <span className="text-accent">/</span>
                     <h3>{commentCount} Comments</h3>
                     <span className="text-accent">/</span>
-                    <h3>Posted {date}</h3>
+                    <h3>Posted {new Date(post.date).toLocaleDateString("da-DK")}</h3>
                   </div>
                   <p className="line-clamp-2 mt-4!">{post.content}</p>
                 </div>
