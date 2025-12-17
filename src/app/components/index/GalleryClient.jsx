@@ -39,10 +39,10 @@ export default function Gallery({ images }) {
                     <div className="col-start-4 row-end-3 self-end w-0 h-0 border-r-accent border-r-50 border-t-50 border-t-transparent z-20 justify-self-end " />
                     <Image src={img.asset?.url} alt={img.description} className="md:w-[800] md:h-[500] w-[300] h-[100] col-start-4 row-end-3  object-cover" height={100} width={100} unoptimized />
                   </div>
-                  <div className="grid gap-4 md:p-8">
+                  <div className="grid gap-4 md:p-4">
                     <h2>Night club party</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!</p>
-                    <Button className="mt-2 place-self-end-safe" onClick={() => setSelectedIdex(null)}>
+                    <Button className="place-self-end-safe" onClick={() => setSelectedIdex(null)}>
                       Read more
                     </Button>
                   </div>
