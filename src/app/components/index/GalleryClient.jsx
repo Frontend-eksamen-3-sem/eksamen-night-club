@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Button from "../Button";
 import GalleryComponent from "./GalleryComponent";
@@ -29,6 +29,7 @@ export default function Gallery({ images }) {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="bg-black border-black justify-center max-w-[70vw]! max-h-[65vh]  md:max-w-[55vw]! md:max-h-[95vh] p-0" aria-describedby="gallery-description">
+          <DialogTitle>Gallery</DialogTitle>
           <Carousel opts={{ startIndex: selectedIndex }}>
             <CarouselPrevious className="z-50 text-text hover:text-accent" />
             <CarouselNext className="z-50 text-text hover:text-accent" />
