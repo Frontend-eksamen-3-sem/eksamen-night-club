@@ -3,7 +3,6 @@ import TextComp from "../components/TextCom";
 
 const SingleBlogPost = async ({ params }) => {
   const { id } = await params;
-  // const response = await fetch(`http://localhost:4000/blogposts/${id}`)
   const response = await fetch(`http://localhost:4000/blogposts/${id}/?embed=comments`, { cache: "no-store" });
   const post = await response.json();
 
