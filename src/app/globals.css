@@ -119,9 +119,6 @@ p {
 
   cursor: pointer;
 }
-.custom-btn:hover {
-  font-weight: 600;
-}
 
 /* overskriver react datepicker styles på booking-siden */
 .react-datepicker-wrapper,
@@ -168,7 +165,6 @@ p {
   .rhap_volume-indicator {
     background: white !important;
   }
-
 
   .rhap_download-progress {
     background-color: var(--pink) !important;
