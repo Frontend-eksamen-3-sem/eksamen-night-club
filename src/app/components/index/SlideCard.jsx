@@ -13,7 +13,7 @@ const SlideCard = ({ event }) => {
         <motion.div className="row-start-1 col-start-1 bg-black border-t-2 border-t-accent" animate={{ opacity: isActive ? 0.45 : 0 }} transition={{ duration: 0.35 }} />
         <motion.div className="row-start-1 col-start-1 grid grid-rows-[1fr_auto_auto] h-full w-full text-white " animate={{ opacity: isActive ? 1 : 0 }} transition={{ duration: 0.35 }}>
           <motion.div className="grid justify-center row-start-1 self-center m-2" initial={{ y: "0%" }} animate={{ y: isActive ? "100%" : "0%" }} transition={{ duration: 0.45, ease: "easeOut" }}>
-            <a className="text-white bg-accent px-4 py-2">BOOK NOW</a>
+            <a className="text-white bg-accent px-4 py-2 cursor-pointer">BOOK NOW</a>
           </motion.div>
 
           <motion.div
@@ -33,7 +33,7 @@ const SlideCard = ({ event }) => {
             transition={{ duration: 0.45, ease: "easeOut" }}
           />
 
-          <motion.div className="row-start-3 col-end-4 col-start-1 bg-black p-4 z-0" initial={{ y: "100%" }} animate={{ y: isActive ? "0%" : "100%" }} transition={{ duration: 0.45, ease: "easeOut" }}>
+          <motion.div className="hidden md:block row-start-3 col-end-4 col-start-1 bg-black p-4 z-0" initial={{ y: "100%" }} animate={{ y: isActive ? "0%" : "100%" }} transition={{ duration: 0.45, ease: "easeOut" }}>
             <h2 className="text-lg font-semibold">{event.title}</h2>
             <p>{event.description?.slice(0, 200)}...</p>
           </motion.div>

@@ -11,7 +11,7 @@ const EventMonthClient = ({ events }) => {
     [events[0], events[1]],
     [events[2], events[3]],
     [events[4], events[5]],
-  ];
+  ]; 
 
   return (
     <div>
@@ -21,29 +21,29 @@ const EventMonthClient = ({ events }) => {
           <div className="md:hidden">
             <SlideCard event={events[activeSlideIndex]} />
           </div>
-          <div className="hidden md:contents">{slides[activeSlideIndex]?.map((event, i) => event && <SlideCard key={i} event={event} />)}</div>
+          <div className="hidden md:contents">{slides[activeSlideIndex]?.map((event, index) => event && <SlideCard key={index} event={event} />)}</div>
         </motion.div>
       </AnimatePresence>
 
       <div className="flex md:hidden justify-center gap-3 mt-4 py-5">
-        {events.map((_, i) => (
+        {events.map((slide, index) => (
           <a
-            key={i}
-            onClick={() => setActiveSlideIndex(i)}
+            key={index}
+            onClick={() => setActiveSlideIndex(index)}
             className={` w-3 h-3  cursor-pointer transition-all
-       ${activeSlideIndex === i ? "bg-accent scale-125" : "bg-white"}
+       ${activeSlideIndex === index ? "bg-accent scale-125" : "bg-white"}
      `}
           />
         ))}
       </div>
 
       <div className="hidden md:flex justify-center gap-3 mt-4 py-5">
-        {slides.map((_, i) => (
+        {slides.map((slide, index) => (
           <a
-            key={i}
-            onClick={() => setActiveSlideIndex(i)}
+            key={index}
+            onClick={() => setActiveSlideIndex(index)}
             className={` w-3 h-3  cursor-pointer transition-all
-       ${activeSlideIndex === i ? "bg-accent scale-125" : "bg-white"}
+       ${activeSlideIndex === index ? "bg-accent scale-125" : "bg-white"}
      `}
           />
         ))}

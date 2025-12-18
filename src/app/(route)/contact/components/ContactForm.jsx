@@ -20,7 +20,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="grid col-[content] py-10 justify-center">
+    <section className="grid col-[content] py-10 md:justify-center">
       <form onSubmit={handleSubmit(onSubmit)} className="text-white grid gap-4 md:w-100">
         {isSubmitSuccessful && <div className="border border-green-500/30 bg-green-500/10 text-green-400 px-2 py-3 text-md">Your comment has been sent successfully.</div>}
         <div>
