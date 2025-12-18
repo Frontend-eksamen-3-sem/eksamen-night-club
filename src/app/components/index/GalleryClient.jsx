@@ -42,9 +42,7 @@ export default function Gallery({ images }) {
                   <div className="grid gap-4 md:p-4">
                     <h2>Night club party</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!</p>
-                    <Button className="place-self-end-safe" onClick={() => setSelectedIdex(null)}>
-                      Read more
-                    </Button>
+                    <Button className="place-self-end-safe">Read more</Button>
                   </div>
                 </CarouselItem>
               ))}
