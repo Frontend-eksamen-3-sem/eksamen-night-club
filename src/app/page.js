@@ -8,8 +8,6 @@ import MusicCarousel from "./components/index/MusicCarousel";
 import VideoCarousel from "./components/index/VideoCarousel";
 import RecentBlog from "./components/index/RecentBlog";
 import EmailForm from "./components/index/EmailForm";
-// import EmailForm from "./components/index/EmailForm";
-import Button from "./components/Button";
 import Footer from "./components/Footer";
 import { Suspense } from "react";
 
@@ -22,7 +20,7 @@ export default function Home() {
       <section className="grid col-[full] grid-cols-subgrid">
         <IndexHero />
       </section>
-      <header className="grid grid-cols-subgrid col-[full] sticky top-0 z-50">
+      <header className="grid grid-cols-subgrid col-[full] sticky top-0 z-60">
         <Header />
       </header>
 
