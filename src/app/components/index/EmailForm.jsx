@@ -19,7 +19,7 @@ const EmailForm = () => {
   return (
     <section className="grid col-[content] py-10 justify-center">
       <form onSubmit={handleSubmit(onSubmit)} className="text-white grid gap-10 md:w-100 justify-center">
-        {isSubmitSuccessful && <div className="mt-4 border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">Your comment has been sent successfully.</div>}
+        {isSubmitSuccessful && <div className="mt-4 border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">Your subscription was successfull!</div>}
         <div className="grid gap-2 text-center">
           <h1 className="uppercase">want the latest night club news</h1>
           <p className="flex justify-center! gap-1 ">
