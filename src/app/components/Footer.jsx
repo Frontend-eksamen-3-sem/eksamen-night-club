@@ -94,7 +94,7 @@ const FetchFooter = async () => {
             <Image src={post.asset?.url} alt={post.title} width={50} height={50} unoptimized className="w-20 h-20 object-cover" />
             <div>
               <p>{post.content?.slice(0, 100)}…</p>
-              <h4>April 17 2018 {post.date}</h4> {/* dato findes ikke i api*/}
+              <h4>{new Date(post.date).toLocaleDateString("da-DK")}</h4>
             </div>
           </div>
         </Link>
