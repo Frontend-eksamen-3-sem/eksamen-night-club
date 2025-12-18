@@ -128,7 +128,7 @@ const MusicCarousel = () => {
         md:top-1/2!
         md:-left-12!
         md:-translate-y-1/2!
-        border-white! text-white! 
+        border-white text-white  hover:text-accent! hover:border-accent!
       "
               />
 
@@ -143,7 +143,7 @@ const MusicCarousel = () => {
         md:top-1/2!
         md:-right-12!
         md:-translate-y-1/2!
-        border-white! text-white!
+        border-white text-white  hover:text-accent! hover:border-accent!
       "
               />
             </div>
