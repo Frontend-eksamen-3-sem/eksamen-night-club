@@ -126,11 +126,39 @@
       "date": "2025-01-03T16:43:02.002Z"
     },
     {
+      "id": 2,
       "blogpostId": 2,
       "name": "Robert Downey Junior",
       "content": "What an amazing evening!",
-      "date": "2025-01-03T16:43:02.002Z",
-      "id": 2
+      "date": "2025-01-03T16:43:02.002Z"
+    },
+    {
+      "id": 3,
+      "blogpostId": 1,
+      "name": "Robert Downey Junior",
+      "content": "Can't wait for the next event!",
+      "date": "2025-01-03T16:43:02.002Z"
+    },
+    {
+      "id": 4,
+      "blogpostId": 4,
+      "name": "Robert Downey Junior",
+      "content": "The music was fantastic!",
+      "date": "2025-01-03T16:43:02.002Z"
+    },
+    {
+      "id": 5,
+      "blogpostId": 2,
+      "name": "Robert Downey Junior",
+      "content": "Had a blast with my friends!",
+      "date": "2025-01-03T16:43:02.002Z"
+    },
+    {
+      "id": 6,
+      "blogpostId": 5,
+      "name": "Robert Downey Junior",
+      "content": "The atmosphere was electric!",
+      "date": "2025-01-03T16:43:02.002Z"
     }
   ],
   "gallery": [
@@ -139,98 +167,112 @@
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery1_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 2,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery2_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 3,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery3_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 4,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery4_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 5,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery5_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 6,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery6_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 7,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery7_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 8,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery8_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 9,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery9_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 10,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery10_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 11,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery11_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 12,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery12_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 13,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery13_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     },
     {
       "id": 14,
       "asset": {
         "url": "http://localhost:4000/file-bucket/gallery14_big.jpg"
       },
-      "description": "A photo"
+      "title": "Night club party",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore neque delectus quo natus aliquid ullam ipsa, quidem maiores, culpa, accusamus commodi. Aperiam, impedit temporibus. Voluptatibus nisi dolorem qui eveniet!"
     }
   ],
   "testimonials": [
