@@ -1,8 +1,6 @@
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
-import Button from "../../components/Button";
 import Footer from "../../components/Footer";
-import TextCom from "./components/TextCom";
 import { Suspense } from "react";
 
 import Image from "next/image";
@@ -39,7 +37,7 @@ export default function Blog({ searchParams }) {
 }
 
 async function BlogCardContainer({ searchParams }) {
-  const params = await searchParams; 
+  const params = await searchParams;
   const page = Number(params.page) || 1;
 
   return <BlogCard page={page} />;
