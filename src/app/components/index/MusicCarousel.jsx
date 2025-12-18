@@ -1,7 +1,6 @@
 "use client";
 import Title from "../Title";
 import AudioPlayer from "react-h5-audio-player";
-// import "react-h5-audio-player/lib/styles.css";
 import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
